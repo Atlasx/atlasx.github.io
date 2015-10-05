@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>ATLASx</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 
     <style>
@@ -52,7 +52,31 @@
         }
         
         .nav {
-               
+            text-align: center;
+            padding-left: 0px;
+        }
+        
+        .nav li {
+            display: inline;
+            border: 3px;
+            border-color: black;
+            border-style: solid;
+            padding: 5px 20px;
+            background-color: rgba(255, 255, 255, 0.0);
+            margin: -3px;
+        }
+        
+        .nav-btn {
+            text-decoration: none;
+        }
+        
+        .nav li:hover {
+            border-color: white;
+            background-color: rgba(100, 100, 100, 0.4);
+        }
+        
+        .nav-btn:active {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -62,9 +86,12 @@
     <div class="outer">
         <div class="middle">
             <div class="inner">
-                <div class="nav">
-                    
-                </div>
+                <ul class="nav">
+                    <li><a class="nav-btn" href="#">Home</a></li>
+                    <li><a class="nav-btn" href="#">Projects</a></li>
+                    <li><a class="nav-btn" href="#">About Me</a></li>
+                    <li><a class="nav-btn" href="#">Contact</a></li>
+                </ul>
                 <div class="heroWrapper">
                     <h1>ATLAS<span>x</span></h1>
                     <p class="heroSub">Art | Games | Code | Projects</p>
