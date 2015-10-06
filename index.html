@@ -6,23 +6,20 @@
     <title>ATLASx</title>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/paper-full.min.js"></script>
 
     <style>
         body {
             background-color: azure;
             font-family: 'lato';
-        }
-        
-        .heroWrapper {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            text-align: center;
+            margin: 0;
+            z-index: 1;
         }
         
         .outer {
             display: table;
-            position: absolute;
-            height: 85%;
+            position: fixed;
+            height: 70%;
             width: 100%;
         }
         
@@ -34,8 +31,11 @@
         .inner {
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
             width: 100%;
         }
+        
+        .heroWrapper {}
         
         .heroWrapper h1 {
             font-size: 200px;
@@ -52,8 +52,11 @@
         }
         
         .nav {
-            text-align: center;
             padding-left: 0px;
+            text-align: center;
+            height: 20%;
+            z-index: 2;
+            margin-top: 100px;
         }
         
         .nav li {
@@ -82,24 +85,47 @@
 </head>
 
 <body>
-
+    <ul class="nav">
+        <li onclick="showdiv('home')"><a class="nav-btn">Home</a></li>
+        <li onclick="showdiv('projects')"><a class="nav-btn">Projects</a></li>
+        <li onclick="showdiv('aboutme')"><a class="nav-btn">About Me</a></li>
+        <li onclick="showdiv('contact')"><a class="nav-btn">Contact</a></li>
+    </ul>
     <div class="outer">
         <div class="middle">
             <div class="inner">
-                <ul class="nav">
-                    <li><a class="nav-btn" href="#">Home</a></li>
-                    <li><a class="nav-btn" href="#">Projects</a></li>
-                    <li><a class="nav-btn" href="#">About Me</a></li>
-                    <li><a class="nav-btn" href="#">Contact</a></li>
-                </ul>
-                <div class="heroWrapper">
-                    <h1>ATLAS<span>x</span></h1>
-                    <p class="heroSub">Art | Games | Code | Projects</p>
+                <div id="home" style="display: block">
+                    <div class="heroWrapper">
+                        <h1>ATLAS<span>x</span></h1>
+                        <p class="heroSub">Art | Games | Code | Projects</p>
+                    </div>
+                </div>
+                <div id="projects" style="display: none">
+                    <h1>Projects</h1>
+                </div>
+                <div id="aboutme" style="display: none">
+                    <h1>About Me</h1>
+                </div>
+                <div id="contact" style="display: none">
+                    <h1>Contact</h1>
                 </div>
             </div>
         </div>
     </div>
 
+    <script>
+        var _hidediv = null;
+
+        function showdiv(id) {
+            if (_hidediv)
+                _hidediv();
+            var div = document.getElementById(id);
+            div.style.display = 'block';
+            _hidediv = function () {
+                div.style.display = 'none';
+            };
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 
