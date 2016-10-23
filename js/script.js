@@ -55,11 +55,8 @@ Bird.prototype.ChangeHeading = function(newHeading) {
 
 Bird.prototype.update = function() {
   this.position.Add(this.heading);
-  this.rotation = Math.atan2(this.heading.y, this.heading.x);
-  if (this.heading.y < 0) {
-    //this.rotation += Math.PI;
-  }
-  //this.rotation = 2*Math.PI - this.rotation;
+  this.rotation = Math.atan2(this.heading.y, this.heading.x)+Math.PI/2;
+
 };
 
 Bird.prototype.draw = function() {
