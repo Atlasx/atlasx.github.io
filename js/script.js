@@ -120,7 +120,7 @@ Bird.prototype.draw = function() {
 var birds = [];
 
 for (var i = 0; i < 30; i++) {
-  createRandomBird(i*50,i*50+200);
+  createRandomBird(i*50+400,i*50+200);
 }
 
 function createRandomBird (x, y) {
