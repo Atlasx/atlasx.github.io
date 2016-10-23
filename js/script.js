@@ -6,6 +6,9 @@ var GameState = {
   RUNNING : "RUNNING"
 };
 
+var pauseImg = document.getElementById('pauseImage');
+var playImg = document.getElementById('playImage');
+
 var currentGameState = GameState.RUNNING;
 
 ctx.canvas.width = window.innerWidth;
@@ -91,16 +94,27 @@ for (var i = 0; i < 10; i++) {
 }
 
 function update () {
+  //Clear screen
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //draw birds
+  drawBirds();
+  //draw ui
+  drawStatusButton();
+
   if (currentGameState == GameState.STOPPED) {return;}
 
   for (var i = 0; i < birds.length; i++) {
     var b = birds[i];
     b.update();
   }
+}
 
-  //Clear screen
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBirds();
+function drawStatusButton () {
+  if (currentGameState == GameState.RUNNING) {
+    ctx.drawImage(pauseImg, 10, 10);
+  } else {
+    ctx.drawImage(playImg, 10, 10)
+  }
 }
 
 function drawBirds () {
@@ -111,5 +125,31 @@ function drawBirds () {
     b.draw();
   }
 }
+
+function isInsideRect (mousePos, rect) {
+  return mousePos.x > rect.x && mousePos.x < rect.x + rect.width && mousePos.y < rect.y + rect.height && mousePos.y > rect.y;
+}
+
+function getMousePos(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+    };
+}
+
+var pauseRect = {x: 10, y: 10, width: pauseImage.width, height: pauseImage.height};
+
+canvas.addEventListener ('click', function (event) {
+  var mousePos = getMousePos(canvas, event);
+
+  if (isInsideRect(mousePos, pauseRect)) {
+    if (currentGameState == GameState.RUNNING) {
+      currentGameState = GameState.STOPPED;
+    } else if (currentGameState == GameState.STOPPED) {
+      currentGameState = GameState.RUNNING;
+    }
+  }
+}, false);
 
 setInterval(update, 10);
