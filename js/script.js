@@ -206,4 +206,4 @@ canvas.addEventListener ('click', function (event) {
 
 }, false);
 
-setInterval(update, 10);
+setInterval(update, 15);
