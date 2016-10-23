@@ -98,6 +98,7 @@ function createRandomBird (x, y) {
   heading.x = Math.random()*2-1;
   heading.y = Math.random()*2-1;
   bird.ChangeHeading(heading);
+  bird.update();
   birds.push(bird);
 }
 
