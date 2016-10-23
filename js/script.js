@@ -15,6 +15,7 @@ ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
 var DEG_TO_RADIANS = Math.PI/180;
+var RAD_TO_DEGREES = 57.2958;
 
 var x = canvas.width/2;
 var y = canvas.height/2;
@@ -54,6 +55,11 @@ Bird.prototype.ChangeHeading = function(newHeading) {
 
 Bird.prototype.update = function() {
   this.position.Add(this.heading);
+  this.rotation = Math.atan2(this.heading.y, this.heading.x);
+  if (this.heading.y < 0) {
+    //this.rotation += Math.PI;
+  }
+  //this.rotation = 2*Math.PI - this.rotation;
 };
 
 Bird.prototype.draw = function() {
@@ -80,15 +86,20 @@ Bird.prototype.draw = function() {
 var birds = [];
 
 for (var i = 0; i < 10; i++) {
-  var bird = new Bird(30*i,30*i+200);
-  bird.rotation = 90 * DEG_TO_RADIANS;
-  if (i % 2 == 0) {
+  createRandomBird(i*50,i*50+200);
+}
+
+function createRandomBird (x, y) {
+  var bird = new Bird(x, y);
+  bird.rotation = 0;
+  if ((Math.random()*2-1) > 0) {
     bird.color = "#ef2864";
   } else {
     bird.color = "#56d2ff";
   }
   var heading = new Vector2();
-  heading.x = 1;
+  heading.x = Math.random()*2-1;
+  heading.y = Math.random()*2-1;
   bird.ChangeHeading(heading);
   birds.push(bird);
 }
@@ -143,13 +154,20 @@ var pauseRect = {x: 10, y: 10, width: pauseImage.width, height: pauseImage.heigh
 canvas.addEventListener ('click', function (event) {
   var mousePos = getMousePos(canvas, event);
 
+  //Pause/Play button
   if (isInsideRect(mousePos, pauseRect)) {
     if (currentGameState == GameState.RUNNING) {
       currentGameState = GameState.STOPPED;
     } else if (currentGameState == GameState.STOPPED) {
       currentGameState = GameState.RUNNING;
     }
+    return;
   }
+
+  //spawn bird
+  createRandomBird(mousePos.x, mousePos.y);
+
+
 }, false);
 
 setInterval(update, 10);
