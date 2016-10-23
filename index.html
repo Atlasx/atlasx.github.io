@@ -1,133 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>ATLASx</title>
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="js/paper-full.min.js"></script>
-
-    <style>
-        body {
-            background-color: azure;
-            font-family: 'lato';
-            margin: 0;
-            z-index: 1;
-        }
-        
-        .outer {
-            display: table;
-            position: fixed;
-            height: 70%;
-            width: 100%;
-        }
-        
-        .middle {
-            display: table-cell;
-            vertical-align: middle;
-        }
-        
-        .inner {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            width: 100%;
-        }
-        
-        .heroWrapper {}
-        
-        .heroWrapper h1 {
-            font-size: 200px;
-            margin: 0px;
-        }
-        
-        .heroWrapper h1 span {
-            font-weight: 100;
-        }
-        
-        .heroSub {
-            font-size: 24px;
-            font-weight: 300;
-        }
-        
-        .nav {
-            padding-left: 0px;
-            text-align: center;
-            height: 20%;
-            z-index: 2;
-            margin-top: 100px;
-        }
-        
-        .nav li {
-            display: inline;
-            border: 3px;
-            border-color: black;
-            border-style: solid;
-            padding: 5px 20px;
-            background-color: rgba(255, 255, 255, 0.0);
-            margin: -3px;
-        }
-        
-        .nav-btn {
-            text-decoration: none;
-        }
-        
-        .nav li:hover {
-            border-color: white;
-            background-color: rgba(100, 100, 100, 0.4);
-        }
-        
-        .nav-btn:active {
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="utf-8"/>
+  <title>JavascriptSim</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-    <ul class="nav">
-        <li onclick="showdiv('home')"><a class="nav-btn">Home</a></li>
-        <li onclick="showdiv('projects')"><a class="nav-btn">Projects</a></li>
-        <li onclick="showdiv('aboutme')"><a class="nav-btn">About Me</a></li>
-        <li onclick="showdiv('contact')"><a class="nav-btn">Contact</a></li>
-    </ul>
-    <div class="outer">
-        <div class="middle">
-            <div class="inner">
-                <div id="home" style="display: block">
-                    <div class="heroWrapper">
-                        <h1>ATLAS<span>x</span></h1>
-                        <p class="heroSub">Art | Games | Code | Projects</p>
-                    </div>
-                </div>
-                <div id="projects" style="display: none">
-                    <h1>Projects</h1>
-                </div>
-                <div id="aboutme" style="display: none">
-                    <h1>About Me</h1>
-                    <p>Hi, I am a pro pvp-er. Commit for the day bruuuuh</p>
-                </div>
-                <div id="contact" style="display: none">
-                    <h1>Contact</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+  <canvas id="mySimulation" width="400" height="500"></canvas>
 
-    <script>
-        var _hidediv = null;
-
-        function showdiv(id) {
-            if (_hidediv)
-                _hidediv();
-            var div = document.getElementById(id);
-            div.style.display = 'block';
-            _hidediv = function () {
-                div.style.display = 'none';
-            };
-        }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
