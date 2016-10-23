@@ -25,18 +25,32 @@ var dy = 0;
 var Vector2 = function() {
   this.x = 0;
   this.y = 0;
-  this.GetMagnitude = function () {return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y,2));};
+  this.magnitude = 0;
+};
+
+Vector2.prototype.RecalculateMagnitude = function () {
+  this.magnitude = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y,2));
 };
 
 Vector2.prototype.Add = function(other) {
   this.x += other.x;
   this.y += other.y;
+  this.RecalculateMagnitude();
 };
 
+Vector2.prototype.Multiply = function (num) {
+  this.x *= num;
+  this.y *= num;
+  this.RecalculateMagnitude();
+}
+
 Vector2.prototype.Normalize = function() {
-  var mag = this.GetMagnitude();
+  this.RecalculateMagnitude();
+  var mag = this.magnitude;
   this.x = x/mag;
   this.y = y/mag;
+  this.RecalculateMagnitude();
+  console.log(this.magnitude);
 };
 
 var Bird = function(x, y) {
@@ -47,6 +61,7 @@ var Bird = function(x, y) {
   this.position.y = y;
   this.heading = new Vector2();
   this.rotation = 0;
+  this.moveSpeed = 0;
 };
 
 Bird.prototype.ChangeHeading = function(newHeading) {
@@ -54,9 +69,31 @@ Bird.prototype.ChangeHeading = function(newHeading) {
 };
 
 Bird.prototype.update = function() {
-  this.position.Add(this.heading);
-  this.rotation = Math.atan2(this.heading.y, this.heading.x)+Math.PI/2;
+  //Update heading based on the behavior we want
+  this.orbitCenterUpdate();
 
+  var delta = this.heading;
+  delta.Multiply(this.moveSpeed);
+
+  this.position.Add(delta);
+  this.rotation = Math.atan2(this.heading.y, this.heading.x)+Math.PI/2;
+};
+
+Bird.prototype.orbitCenterUpdate = function() {
+  var newHead = new Vector2();
+  var normal = new Vector2();
+  normal.x = canvas.width/2 - this.position.x;
+  normal.y = canvas.height/2 - this.position.y;
+  //normal now points to the center of the screen
+
+  newHead.x = -normal.y;
+  newHead.y = normal.x;
+  var mag = Math.sqrt(Math.pow(newHead.x, 2) + Math.pow(newHead.y, 2));
+  newHead.x = newHead.x / mag;
+  newHead.y = newHead.y / mag;
+  //console.log(newHead.magnitude);
+
+  this.heading = newHead;
 };
 
 Bird.prototype.draw = function() {
@@ -82,7 +119,7 @@ Bird.prototype.draw = function() {
 
 var birds = [];
 
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 30; i++) {
   createRandomBird(i*50,i*50+200);
 }
 
@@ -98,6 +135,7 @@ function createRandomBird (x, y) {
   heading.x = Math.random()*2-1;
   heading.y = Math.random()*2-1;
   bird.ChangeHeading(heading);
+  bird.moveSpeed = Math.random()*5+1;
   bird.update();
   birds.push(bird);
 }
