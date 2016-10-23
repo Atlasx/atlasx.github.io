@@ -2,8 +2,8 @@ var canvas = document.getElementById("mySimulation");
 var ctx = canvas.getContext("2d");
 
 var GameState = {
-  STOPPED : {value: 0, name="STOPPED", code: "S"},
-  RUNNING : {value: 1, name="RUNNING", code: "R"}
+  STOPPED : "STOPPED",
+  RUNNING : "RUNNING"
 };
 
 var currentGameState = GameState.RUNNING;
@@ -92,7 +92,7 @@ for (var i = 0; i < 10; i++) {
 
 function update () {
   if (currentGameState == GameState.STOPPED) {return;}
-  
+
   for (var i = 0; i < birds.length; i++) {
     var b = birds[i];
     b.update();
