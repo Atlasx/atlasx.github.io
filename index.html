@@ -6,7 +6,13 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <canvas id="mySimulation" width="400" height="500"></canvas>
+  <canvas id="mySimulation" width="400" height="500" style="position:absolute; z-index:0;"></canvas>
+  <div class="content-container">
+    <div class="content">
+      <!--<div id="logo"></div>-->
+      <img id="logo" src="images/logo_cutout.png" width="256" height="256">
+    </div>
+  </div>
   <img id="pauseImage" src="images/pause.png" width="32" height="32" style="display: none;">
   <img id="playImage" src="images/play.png" width="32" height="32" style="display: none;">
   <script src="js/script.js"></script>
