@@ -97,13 +97,15 @@ Bird.prototype.orbitCenterUpdate = function() {
 };
 
 Bird.prototype.draw = function() {
+
   ctx.save();
+  ctx.beginPath();
   //Move to location
   ctx.translate(this.position.x, this.position.y);
   //Rotate to rotation
   ctx.rotate(this.rotation);
   //Draw bird shape
-  ctx.beginPath();
+
   ctx.moveTo(0, 0);
   ctx.lineTo(15, 40);
   ctx.lineTo(0, 35);
@@ -119,8 +121,8 @@ Bird.prototype.draw = function() {
 
 var birds = [];
 
-for (var i = 0; i < 30; i++) {
-  createRandomBird(i*50+400,i*50+200);
+for (var i = 0; i < 300; i++) {
+  createRandomBird(i+400,i+200);
 }
 
 function createRandomBird (x, y) {
@@ -135,14 +137,15 @@ function createRandomBird (x, y) {
   heading.x = Math.random()*2-1;
   heading.y = Math.random()*2-1;
   bird.ChangeHeading(heading);
-  bird.moveSpeed = Math.random()*5+1;
+  bird.moveSpeed = Math.random()*10+1;
   bird.update();
   birds.push(bird);
 }
 
 function update () {
   //Clear screen
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ctx.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.width = canvas.width;
   //draw birds
   drawBirds();
   //draw ui
@@ -206,4 +209,4 @@ canvas.addEventListener ('click', function (event) {
 
 }, false);
 
-setInterval(update, 15);
+setInterval(update, 30);
