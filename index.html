@@ -18,7 +18,7 @@
         ga('send', 'pageview');
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <div class="navbar-wrapper">
         <div class="container">
             <nav class="navbar navbar-inverse navbar-static-top">
@@ -34,9 +34,18 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Link1<span class="sr-only">(current)</span></a></li>
-                            <li><a href="#about">Link2</a></li>
-                            <li><a href="#contact">Link3</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#ppm">Parts Per Million</a></li>
+                                    <li><a href="#veloces">Veloces</a></li>
+                                    <li><a href="#pixelyen">PixelYen</a></li>
+                                    <li><a href="#agcubio">AgCubio</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#link3">Link3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,16 +58,15 @@
                 <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"/>
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Connor Dougals</h1>
-                        <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">View Projects</a></p>
+                        <h1>Connor Douglas</h1>
+                        <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.<br><br><br></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="container">
+        <div id="ppm" class="container">
             <div class="col-md-6">
                 <h2 class="featurette-heading">Parts Per Million 10<sup>(-6)</sup></h2>
                 <h3 class="text-muted">C# Unity</h3>
@@ -70,7 +78,7 @@
                 <img class="featurette-image img-responsive center-block" data-src="" alt="Parts Per Million image">
             </div>
         </div>
-        <div class="container">
+        <div id="veloces" class="container">
             <div class="col-md-6">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="Veloces image">
             </div>
@@ -82,7 +90,7 @@
                 </p>
             </div>
         </div>
-        <div class="container">
+        <div id="pixelyen" class="container">
             <div class="col-md-6">
                 <h2 class="featurette-heading">PixelYen</h2>
                 <h3 class="text-muted">C++ Qt Magick++</h3>
@@ -94,7 +102,7 @@
                 <img class="featurette-image img-responsive center-block" data-src="" alt="PixelYen image">
                     </div>
         </div>
-        <div class="container">
+        <div id="agcubio" class="container">
             <div class="col-md-6">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="AgCubio image">
                     </div>
@@ -107,5 +115,17 @@
             </div>
         </div>
     </div>
+    <hr class="featurette-divider">
+    <div id="about" class="container">
+        
+    </div>
+    <div id="contact" class="container">
+        
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Created by Connor Douglas, 2017</p>
+        </div>
+    </footer>
 </body>
 </html>
