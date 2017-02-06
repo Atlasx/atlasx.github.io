@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>cdouglas.io</title>
+    <link rel="icon" type="image/png" href="images/logo_cutout.png">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/carousel.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,8 +20,8 @@
         ga('send', 'pageview');
     </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <div class="navbar-wrapper">
+<body>
+    <div id="nav" class="navbar-wrapper">
         <div class="container">
             <nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container">
@@ -30,7 +32,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Connor Douglas</a>
+                        <a class="navbar-brand" href="#">Connor J Douglas</a>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
@@ -58,7 +60,7 @@
                 <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"/>
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Connor Douglas</h1>
+                        <h1>Connor J Douglas</h1>
                         <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.<br><br><br></p>
                     </div>
                 </div>
@@ -67,51 +69,63 @@
     </div>
     <div class="container">
         <div id="ppm" class="container">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h2 class="featurette-heading">Parts Per Million 10<sup>(-6)</sup></h2>
                 <h3 class="text-muted">C# Unity</h3>
                 <p class="lead">
                     Hex map RTS focused on environmental impacts and green society. Currently being built by a team of 3 programmers and 3 artists in Unity 5.
                 </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ppmModal">
+                    Learn More
+                </button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="Parts Per Million image">
             </div>
         </div>
         <div id="veloces" class="container">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="Veloces image">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h2 class="featurette-heading">Veloces</h2>
                 <h3 class="text-muted">C# Unity</h3>
                 <p class="lead">
                 2D local co-op hack and slash developed with a team of 2 programmers and 2 artists. Game was created in Unity 5 over the Fall 2016 semester.
                 </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#velocesModal">
+                    Learn More
+                </button>
             </div>
         </div>
         <div id="pixelyen" class="container">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h2 class="featurette-heading">PixelYen</h2>
                 <h3 class="text-muted">C++ Qt Magick++</h3>
                 <p class="lead">
                 Sprite drawing application with a suite of drawing tools. Includes a layer and frame organizational system. Animations can be exported into animated GIFs.
                 </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pixelyenModal">
+                    Learn More
+                </button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="PixelYen image">
                     </div>
         </div>
         <div id="agcubio" class="container">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img class="featurette-image img-responsive center-block" data-src="" alt="AgCubio image">
                     </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h2 class="featurette-heading">AgCubio</h2>
                 <h3 class="text-muted">C# VisualStudio MySQL SFML</h3>
                 <p class="lead">
                 Networked multiplayer game based off of the popular Agar.io game. Custom screen-scrolling, physics, and collisions. Data from games is saved to a MySQL server and accessible through a site hosted by the game server.
                 </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agcubioModal">
+                    Learn More
+                </button>
             </div>
         </div>
     </div>
@@ -122,6 +136,27 @@
     <div id="contact" class="container">
         
     </div>
+    
+    <div class="modal fade" id="ppmModal" tabindex="-1" role="dialog" aria-labelledby="ppmModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Parts Per Million 10<sup>(-6)</sup></h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Here is the full description of the Parts Per Million project
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer class="footer">
         <div class="container">
             <p class="text-muted">Created by Connor Douglas, 2017</p>
