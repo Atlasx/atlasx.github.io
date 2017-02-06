@@ -32,3 +32,20 @@ body > .container {
 .container .text-muted {
     margin: 20px 0;
 }
+
+.blur {
+    filter: blur(7px);
+}
+
+.arrow-down {
+    margin-bottom: 0px;
+}
+
+.vert {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vert-mid {
+    vertical-align: middle;
+}

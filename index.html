@@ -7,6 +7,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/carousel.css" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
@@ -39,6 +40,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="#allprojects">All Projects</a></li>
                                     <li><a href="#ppm">Parts Per Million</a></li>
                                     <li><a href="#veloces">Veloces</a></li>
                                     <li><a href="#pixelyen">PixelYen</a></li>
@@ -47,7 +49,7 @@
                             </li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="ConnorJDouglasResume.pdf">Resume</a></li>
+                            <li><a target="_blank" href="ConnorJDouglasResume.pdf">Resume</a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,17 +59,18 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"/>
-                <div class="container">
-                    <div class="carousel-caption">
+                <img class="first-slide blur" src="images/HexGrid360v5.gif" alt="First slide"/>
+                <div class="vert">
+                    <div class="carousel-caption vert-mid">
                         <h1>Connor J Douglas</h1>
-                        <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.<br><br><br></p>
+                        <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <p class="text-center arrow-down"><a href="#allprojects"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a></p>
+    <div id="allprojects" class="container">
         <div id="ppm" class="container">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Parts Per Million 10<sup>(-6)</sup></h2>
@@ -80,12 +83,13 @@
                 </button>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="" alt="Parts Per Million image">
+                <img class="featurette-image img-rounded img-responsive center-block" src="images/ppm.png" alt="Parts Per Million image">
             </div>
         </div>
+        <hr class="featurette-divider">
         <div id="veloces" class="container">
             <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="" alt="Veloces image">
+                <img class="featurette-image img-rounded img-responsive center-block" src="images/veloces.png" alt="Veloces image">
             </div>
             <div class="col-md-7">
                 <h2 class="featurette-heading">Veloces</h2>
@@ -98,6 +102,7 @@
                 </button>
             </div>
         </div>
+        <hr class="featurette-divider">
         <div id="pixelyen" class="container">
             <div class="col-md-7">
                 <h2 class="featurette-heading">PixelYen</h2>
@@ -110,12 +115,13 @@
                 </button>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="" alt="PixelYen image">
+                <img class="featurette-image img-rounded img-responsive center-block" data-src="" alt="PixelYen image">
                     </div>
         </div>
+        <hr class="featurette-divider">
         <div id="agcubio" class="container">
             <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src="" alt="AgCubio image">
+                <img class="featurette-image img-rounded img-responsive center-block" data-src="" alt="AgCubio image">
                     </div>
             <div class="col-md-7">
                 <h2 class="featurette-heading">AgCubio</h2>
@@ -131,8 +137,18 @@
     </div>
     <hr class="featurette-divider">
     <div id="about" class="container">
-        
+        <h2 class="featurette-heading">About</h2>
+        <div class="container">
+            <div class="col-md-5">
+                <img src="images/face.jpg" class="text-center img-circle featurette-image img-responsive center-block" alt="Profile Photo">
+                <h3 class="name-heading text-center">Connor J Douglas</h3>
+            </div>
+            <div class="col-md-7">
+                <p class="lead">I've been programming for 5 years now starting with AP classes in high school all the way through advanced compsci classes at the University of Utah. I am currently majoring in Computer Science with an emphasis in Entertainment Arts and Engineering. I've made iOS apps, QT apps, Games, Websites, Servers, and Databases working in languages such as C++, C#, Java, HTML, CSS, Javascript, Ruby, Python, HLSL, MIPS, MySQL, QT, and others.</p>
+            </div>
+        </div>
     </div>
+    <hr class="featurette-divider">
     <div id="contact" class="container">
         
     </div>
