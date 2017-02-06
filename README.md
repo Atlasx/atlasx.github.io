@@ -1,2 +1,4 @@
 # atlasx.github.io
-Javascript Testing Ground
+Resume Website
+
+Forwarded to cdouglas.io
