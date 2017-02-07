@@ -80,6 +80,54 @@ body {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (min-width: 900px) and (max-width: 1000px) and (min-height: 270px){
+    .carousel {
+        height: 30vh;
+    }
+    .carousel .item {
+        height: 30vh;
+    }
+    .carousel-inner > .item > span > img {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) and (min-height: 270px){
+    .carousel {
+        height: 40vh;
+    }
+    .carousel .item {
+        height: 40vh;
+    }
+    .carousel-inner > .item > span > img {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) and (max-height: 270px){
+    .carousel {
+        height: 60vh;
+    }
+    .carousel .item {
+        height: 60vh;
+    }
+    .carousel-inner > .item > span > img {
+        height: 60vh;
+    }
+}
+
+@media (min-width:1400px) and (max-width:2000px){
+    .carousel {
+        height: 60vh;
+    }
+    .carousel .item {
+        height: 60vh;
+    }
+    .carousel-inner > .item > span > img {
+        height: 60vh;
+    }
+}
+
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
