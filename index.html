@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <title>cdouglas.io</title>
     <link rel="icon" type="image/png" href="images/logo_cutout.png">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/carousel.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -21,10 +21,10 @@
         ga('send', 'pageview');
     </script>
 </head>
-<body>
+<body style="background-image: url(images/white-oilcloth-seamless-background-texture.jpg); background-repeat: repeat;">
     <div id="nav" class="navbar-wrapper">
         <div class="container">
-            <nav class="navbar navbar-inverse navbar-static-top">
+            <nav class="navbar navbar-inverse navbar-static-top" data-spy="affix-top" data-offset-top="60" data-offset-bottom="200">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -59,12 +59,12 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide blur" src="images/HexGrid360v6.gif" alt="First slide"/>
-                <div class="vert">
-                    <div class="carousel-caption vert-mid">
-                        <h1>Connor J Douglas</h1>
-                        <p>Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.</p>
-                    </div>
+                <span class="vignette">
+                <img class="first-slide blur" src="images/HexGrid360v6.gif" style="position:fixed;" alt="First slide"/>
+                </span>
+                <div class="carousel-caption">
+                    <h1 class="jumbo">Connor J Douglas</h1>
+                    <p class="jumbo-subtitle">Welcome! Here you will find projects, code samples, and other random goodies created by me over the past few years.</p>
                 </div>
             </div>
         </div>
@@ -72,9 +72,9 @@
     <p class="text-center arrow-down"><a href="#allprojects"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a></p>
     <div id="allprojects" class="container">
         <div id="ppm" class="container">
-            <div class="col-md-7">
+            <div class="col-xs-7">
                 <h2 class="featurette-heading">Parts Per Million 10<sup>(-6)</sup></h2>
-                <h3 class="text-muted">C# Unity</h3>
+                <h4 class="text-muted">C# Unity</h4>
                 <p class="lead">
                     Hex map RTS focused on environmental impacts and green society. Currently being built by a team of 3 programmers and 3 artists in Unity 5.
                 </p>
@@ -82,18 +82,18 @@
                     Learn More
                 </button>
             </div>
-            <div class="col-md-5">
+            <div class="col-xs-5">
                 <img class="featurette-image img-rounded img-responsive center-block" src="images/ppm.png" alt="Parts Per Million image">
             </div>
         </div>
         <hr class="featurette-divider">
         <div id="veloces" class="container">
-            <div class="col-md-5">
+            <div class="col-xs-5">
                 <img class="featurette-image img-rounded img-responsive center-block" src="images/veloces.png" alt="Veloces image">
             </div>
-            <div class="col-md-7">
+            <div class="col-xs-7">
                 <h2 class="featurette-heading">Veloces</h2>
-                <h3 class="text-muted">C# Unity</h3>
+                <h4 class="text-muted">C# Unity</h4>
                 <p class="lead">
                 2D local co-op hack and slash developed with a team of 2 programmers and 2 artists. Game was created in Unity 5 over the Fall 2016 semester.
                 </p>
@@ -104,9 +104,9 @@
         </div>
         <hr class="featurette-divider">
         <div id="pixelyen" class="container">
-            <div class="col-md-7">
+            <div class="col-xs-7">
                 <h2 class="featurette-heading">PixelYen</h2>
-                <h3 class="text-muted">C++ Qt Magick++</h3>
+                <h4 class="text-muted">C++ Qt Magick++</h4>
                 <p class="lead">
                 Sprite drawing application with a suite of drawing tools. Includes a layer and frame organizational system. Animations can be exported into animated GIFs.
                 </p>
@@ -114,18 +114,18 @@
                     Learn More
                 </button>
             </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-rounded img-responsive center-block" data-src="" alt="PixelYen image">
+            <div class="col-xs-5">
+                <img class="featurette-image img-rounded img-responsive center-block" src="images/default.png" alt="PixelYen image">
                     </div>
         </div>
         <hr class="featurette-divider">
         <div id="agcubio" class="container">
-            <div class="col-md-5">
-                <img class="featurette-image img-rounded img-responsive center-block" data-src="" alt="AgCubio image">
+            <div class="col-xs-5">
+                <img class="featurette-image img-rounded img-responsive center-block" src="images/default.png" alt="AgCubio image">
                     </div>
-            <div class="col-md-7">
+            <div class="col-xs-7">
                 <h2 class="featurette-heading">AgCubio</h2>
-                <h3 class="text-muted">C# VisualStudio MySQL SFML</h3>
+                <h4 class="text-muted">C# VisualStudio MySQL SFML</h4>
                 <p class="lead">
                 Networked multiplayer game based off of the popular Agar.io game. Custom screen-scrolling, physics, and collisions. Data from games is saved to a MySQL server and accessible through a site hosted by the game server.
                 </p>
@@ -135,24 +135,25 @@
             </div>
         </div>
     </div>
-    <hr class="featurette-divider">
-    <div id="about" class="container">
-        <h2 class="featurette-heading">About</h2>
+    <div class="container">
+        <hr class="featurette-divider">
         <div class="container">
             <div class="col-md-5">
-                <img src="images/face.jpg" class="text-center img-circle featurette-image img-responsive center-block" alt="Profile Photo">
+                <img src="images/face.jpg" class="text-center img-circle featurette-image img-responsive center-block" alt="Profile Photo" style="width:250px;">
                 <h3 class="name-heading text-center">Connor J Douglas</h3>
             </div>
             <div class="col-md-7">
-                <p class="lead">I've been programming for 5 years now starting with AP classes in high school all the way through advanced compsci classes at the University of Utah. I am currently majoring in Computer Science with an emphasis in Entertainment Arts and Engineering. I've made iOS apps, QT apps, Games, Websites, Servers, and Databases working in languages such as C++, C#, Java, HTML, CSS, Javascript, Ruby, Python, HLSL, MIPS, MySQL, QT, and others.</p>
+                <h2 id="about" class="featurette-heading">About</h2>
+                <p class="lead center-block" style="margin-top:auto;margin-bottom:auto;">    I've been programming for 5 years now starting with AP classes in high school all the way through advanced compsci classes at the University of Utah. I am currently majoring in Computer Science with an emphasis in Entertainment Arts and Engineering. I've made iOS apps, QT apps, Games, Websites, Servers, and Databases working in languages such as C++, C#, Java, HTML, CSS, Javascript, Ruby, Python, HLSL, MIPS, MySQL, QT, and others.</p>
             </div>
         </div>
     </div>
-    <hr class="featurette-divider">
-    <div id="contact" class="container">
+    <div class="container">
+        <hr class="featurette-divider">
+        <h2 id="contact" class="section-heading text-center">Contact</h2>
         
     </div>
-    
+    <hr class="featurette-divider">
     <div class="modal fade" id="ppmModal" tabindex="-1" role="dialog" aria-labelledby="ppmModal">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -171,7 +172,30 @@
             </div>
         </div>
     </div>
-    
+    <div class="container">
+        <div id="disqus_thread"></div>
+        <script>
+            
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        
+         var disqus_config = function () {
+         this.page.url = "http://cdouglas.io";  // Replace PAGE_URL with your page's canonical URL variable
+         this.page.identifier = "mainpage"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+         };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+         var d = document, s = d.createElement('script');
+         s.src = 'https://cdouglas-1.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+         })();
+            </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <div class="footer-spacer">
+    </div>
     <footer class="footer">
         <div class="container">
             <p class="text-muted">Created by Connor Douglas, 2017</p>
