@@ -77,7 +77,7 @@ canvas {
 
 .featurette-image {
     margin-top:10px;
-    width:250px;
+    width:300px;
 }
 
 .jumbo {
@@ -92,7 +92,7 @@ canvas {
     .jumbo {
         font-size:80px;
     }
-    
+
     .jumbo-subtitle {
         font-size:30px;
     }
@@ -102,7 +102,7 @@ canvas {
     .jumbo {
         font-size:60px;
     }
-    
+
     .jumbo-subtitle {
         font-size:20px;
     }
