@@ -39,7 +39,7 @@ body {
   background: rgba(255,255,255,0.8);
 }
 
-.overlay:hover {
+.overlay:hover, .overlay:active{
   opacity: 1;
 }
 
