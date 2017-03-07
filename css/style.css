@@ -13,6 +13,48 @@ canvas {
     margin: 0 auto;
 }
 
+.overlay {
+  opacity: 0;
+  position: absolute;
+  z-index:10;
+  transition: 0.5s;
+  overflow-x: hidden;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.8);
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay-background {
+  position: relative;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:460px;
+}
+
+.overlay-image {
+  width:100%;
+  height:100%;
+}
+
+.content-height {
+  height:480px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.profile-image {
+  padding:15px;
+  width:300px;
+  height:300px;
+}
+
 .footer > .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -76,8 +118,9 @@ canvas {
 }
 
 .featurette-image {
-    margin-top:10px;
-    width:300px;
+    padding:15px;
+    width:640px;
+    height:480px;
 }
 
 .jumbo {
