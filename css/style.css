@@ -1,6 +1,7 @@
 .body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: red;
 }
 
 .navi-brand {
