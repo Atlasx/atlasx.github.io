@@ -1,27 +1,64 @@
 .body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: red;
+}
+
+.navbar {
+  padding-right: 15px;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color:white;
+}
+
+a {
+    color: inherit;
+}
+
+li {
+  background-color: white;
+  float: left;
+  position: relative;
+  list-style-type: none;
+}
+
+ li:hover {
+  color: white;
+  border-bottom: 5px;
+  border-color: red;
+  background-color: black;
+}
+
+ li > a:hover {
+  text-decoration: none;
+}
+
+ li > a:active {
+  text-decoration: none;
 }
 
 .navi-brand {
   font-family: 'Raleway', sans-serif;
+  font-size: 2em;
   color: black;
 }
 
 .navi-brand:hover {
   color: #3f3f3f;
+  text-decoration: none;
 }
 
 .navi-section {
   font-family: 'Raleway', sans-serif;
-  border-bottom: 0px;
   color: black;
+  padding:15px;
+  float:left;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
 }
 
 .navi-section:hover {
-  color: #3f3f3f;
-  border-bottom: 5px;
-  border-color: black;
-  background-color: red;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  background-color: transparent;
+  border-bottom: 1px solid black;
 }
