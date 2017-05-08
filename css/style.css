@@ -10,6 +10,22 @@
   background-color:white;
 }
 
+.navbar-toggle {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  border-radius: 0px;
+  border: 0px;
+  min-height: 51px;
+  min-width: 51px;
+  text-align: center;
+  display: none;
+}
+
+.icon-bar {
+  background-color: black;
+}
+
 a {
     color: inherit;
 }
@@ -28,8 +44,21 @@ li {
   background-color: black;
 }
 
+li.active {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+
+li.active > a {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  background-color: #dfdfdf;
+  border-bottom: 2px solid black;
+}
+
  li > a:hover {
   text-decoration: none;
+  background-color: #dfdfdf;
 }
 
  li > a:active {
@@ -53,12 +82,22 @@ li {
   padding:15px;
   float:left;
   display: inline-block;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .navi-section:hover {
   font-family: 'Raleway', sans-serif;
   color: black;
-  background-color: transparent;
-  border-bottom: 1px solid black;
+  background-color: #dfdfdf;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 768px) {
+
+.navbar-toggle {
+  display: block;
+  position: relative;
+  float: right;
+}
+
 }
