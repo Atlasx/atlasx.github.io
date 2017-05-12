@@ -1,6 +1,7 @@
-.body {
+body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: black;
 }
 
 .hero-image {
@@ -12,6 +13,7 @@
   width: 100%;
   display: table-cell;
   vertical-align: middle;
+  box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
 }
 
 .hero-center {
@@ -22,7 +24,6 @@
 }
 
 .hero-title {
-  font-family: "Roboto";
   color: white;
   font-size: 4.5em;
   font-weight: 100;
@@ -80,12 +81,10 @@ li {
 }
 
 li.active {
-  font-family: 'Roboto', sans-serif;
   color: black;
 }
 
 li.active > a {
-  font-family: 'Roboto', sans-serif;
   color: black;
   background-color: transparent;
   border-bottom: 2px solid black;
@@ -105,7 +104,6 @@ li.active > a {
 }
 
 .navi-brand {
-  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 3em;
   padding: 15px;
@@ -118,7 +116,6 @@ li.active > a {
 }
 
 .navi-section {
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.1em;
   color: black;
@@ -140,6 +137,10 @@ li.active > a {
   display: block;
   position: relative;
   float: right;
+}
+
+.navi-brand {
+  font-size: 2.5em;
 }
 
 }
