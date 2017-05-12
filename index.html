@@ -10,13 +10,13 @@
 
 <body>
   <div class="container">
-    <nav class="navbar navbar-fixed-top">
+    <nav id="navbar" class="navbar navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <i class="fa fa-bars fa-fw fa-lg" aria-hidden="true"></i>
           </button>
-          <a class="navbar-brand navi-brand" href="#">Connor J Douglas</a>
+          <h1 class="navbar-brand navi-brand">Connor J Douglas <span id="alt-subtitle" style="visibility:hidden;">Game Developer</span></span> <small id="brand-subtitle">Game Developer</small></h1>
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -36,6 +36,9 @@
               <a class="navi-section" href="./about"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
             </li>
             <li>
+              <a class="navi-section" href="./ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
+            </li>
+            <li>
               <a class="navi-section" href="/contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
             </li>
           </ul>
@@ -43,22 +46,25 @@
       </div>
     </nav>
   </div>
-  <div class="hero-centered-container">
 
-  </div>
+  <!-- Feature Image -->
   <div class="hero-image" style="background-image: url(images/ppm.png);">
+    <div class="hero-center">
+      <h1 class="hero-title">Parts Per Million</h1>
+      <button type="button" class="hero-btn">
+        <i id="featurePlay" class="fa fa-play fa-4x hero-play" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <!--Spacer for Bootstrap to fix itself-->
+  <div class="container" style="min-height:100vh;"></div>
+
+  <!-- Feature Content -->
+  <div id="featureDesc" class="container" style="min-height:100vh;background-color:#222c37;">
+    <h1>test</h1>
 
   </div>
-  <div class="hero-center">
-    <h1 class="hero-title">Parts Per Million</h1>
-    <button type="button" class="hero-btn" data-toggle="modal" data-target="#featurePlay">
-      <i class="fa fa-play fa-4x hero-play" aria-hidden="true"></i>
-    </button>
-  </div>
-  
-  <!--<h1 class="hero-title">Parts Per Million</h1>-->
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
@@ -67,5 +73,30 @@
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+ var scroll_start = 0;
+ var offset = 50;
+ $(document).scroll(function() {
+    scroll_start = $(this).scrollTop();
+    if(scroll_start > offset) {
+        $('#navbar').css('background-color', 'white');
+        $('.navi-brand').css('color', 'black');
+        $('.navi-section').css('color', 'black');
+        $('#brand-subtitle').hide();
+        $('#alt-subtitle').css('visibility', 'visible');
+     } else {
+        $('#navbar').css('background-color', 'transparent');
+        $('#brand-subtitle').show();
+        $('#alt-subtitle').css('visibility', 'hidden');
+     }
+ });
+});
 
+$("#featurePlay").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#featureDesc").offset().top - 50},
+        '5000');
+});
+</script>
 </html>
