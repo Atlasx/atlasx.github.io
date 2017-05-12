@@ -160,6 +160,14 @@ li.active > a {
   font-size: 2em;
 }
 
+#brand-subtitle {
+  display: none;
+}
+
+#alt-subtitle {
+  display: none;
+}
+
 .hero-image {
   box-shadow: 0 0 50px rgba(0,0,0,0.9) inset;
 }
