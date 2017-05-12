@@ -33,12 +33,76 @@ h1 {
   font-weight: 100;
 }
 
+h2 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+h1 > small {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 100;
+  font-family: "Roboto Condensed";
+  color: #c0c0c0;
+}
+
+h2 > small {
+  display: inline-block;
+  font-size: 0.6em;
+  font-weight: 100;
+  font-family: "Roboto Condensed";
+  color: #c0c0c0;
+}
+
 p {
   font-family: "Roboto Condensed";
+  font-size: 1.5em;
 }
 
 hr {
   width: 50%;
+}
+
+.system-feature {
+  min-height: 325px;
+}
+
+.pol-cloud {
+  position: absolute;
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
+
+.roll-in {
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.roll-in2 {
+  opacity: 0;
+  transition: 2s;
+  transform: rotate(45deg);
+}
+
+.roll-in3 {
+  opacity: 0;
+  transition: 2.5s;
+  transform: rotate(180deg);
+}
+
+.roll-in-end {
+  opacity: 1;
+  transform: translateX(-100px) rotate(45deg);
+}
+
+.roll-in-end2 {
+  opacity: 1;
+  transform: translateX(-100px) rotate(100deg);
+}
+
+.roll-in-end3 {
+  opacity: 1;
+  transform: translateX(-100px) rotate(230deg);
 }
 
 .featured-text {

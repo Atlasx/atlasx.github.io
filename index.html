@@ -77,16 +77,46 @@
       their island.
     </p>
   </div>
-  <div class="container-fluid light-color">
-    <h1 class="center">Systems</h1>
+  <div id="weather" class="container-fluid light-color">
+    <h1 class="center">Systems<small>The core components of the game</small></h1>
     <hr />
+    <div class="container">
+      <div class="row system-feature">
+        <div class="col-md-7">
+          <h2>Weather <small>A system designed to guide players</small></h2>
+          <p>
+            The weather system I built for Parts Per Million was intended to deliver swift and hard punishment on a player who was taking the wrong path
+            through the game. With a series of categories for weather events enabled for scaling storms including dust storms, polluted rain, and hurricanes.
+          </p>
+        </div>
+        <div class="col-md-5 center">
+          <img class="roll-in pol-cloud" src="images/pollution1.png" style="margin-left:0px;width:300px;"/>
+          <img class="roll-in2 pol-cloud" src="images/pollution1.png" style="margin-left:-80px;margin-top:100px;width:200px;"/>
+          <img class="roll-in3 pol-cloud" src="images/pollution1.png" style="width:250px;margin-left:160px;margin-top:50px;"/>
+
+        </div>
+      </div>
+      <div class="row system-feature">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-7">
+          <h2>Hex Grid <small>A procedural system for generating unique islands</small></h2>
+          <p>
+            The grid is <i>the</i> core component for Parts Per Million. With configureable biomes, cell types, blend parameters, and more the grid creates
+            an entirely new island with different emergent gameplay in each playthrough. The heightmap is generated off of layered octaves of perlin noise multiplied
+            with a radial gradient to get a coherent island shape. From there biomes are randomly planted throughout and grow until they cover the island completely.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container-fluid alt-light-color">
-    <h1 class="center">Trailer</h1>
+    <h1 class="center">Trailer<small>Watch the island come to life</small></h1>
     <hr />
   </div>
   <div class="container-fluid light-color">
-    <h1 class="center">Team</h1>
+    <h1 class="center">Team<small>The team behind it all</small></h1>
     <hr />
   </div>
 </body>
@@ -100,13 +130,14 @@
 <script>
 $(document).ready(function(){
  var scroll_start = 0;
- var offset = 50;
+ var top_offset = 50;
+ var weather_offset = $('#weather').offset().top - 300;
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
     if ($(document).width() < 768) {
       $('#navbar').css('background-color', 'white');
     } else {
-      if(scroll_start > offset) {
+      if(scroll_start > top_offset) {
           $('#navbar').css('background-color', 'white');
           $('.navi-brand').css('color', 'black');
           $('.navi-section').css('color', 'black');
@@ -116,6 +147,11 @@ $(document).ready(function(){
           $('#navbar').css('background-color', 'transparent');
           $('#brand-subtitle').show();
           $('#alt-subtitle').hide();
+       }
+       if (scroll_start > weather_offset) {
+         $('.roll-in').addClass('roll-in-end');
+         $('.roll-in2').addClass('roll-in-end2');
+         $('.roll-in3').addClass('roll-in-end3');
        }
     }
  });
