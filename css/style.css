@@ -175,7 +175,7 @@ li.active > a {
   border-bottom: 2px solid black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
 .navbar-toggle {
   display: block;
@@ -201,6 +201,22 @@ li.active > a {
 
 .navbar {
   background-color: white;
+}
+
+.hero-title {
+  font-size: 2em;
+}
+
+.hero-subtitle {
+  font-size: 1.3em;
+}
+
+.hero-footer {
+  padding-top: 85vh;
+}
+
+.hero-center {
+  padding-top: 40vh;
 }
 
 }

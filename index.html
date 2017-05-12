@@ -57,9 +57,6 @@
       <p class="hero-subtitle">
         A climate focused hex map strategy game<br /> with a stylized low poly aesthetic
       </p>
-      <!--<button type="button" class="hero-btn">
-        <i id="featurePlay" class="fa fa-play fa-4x hero-play" aria-hidden="true"></i>
-      </button>-->
     </div>
     <div class="hero-footer">
       <i id="featurePlay" class="fa fa-angle-down fa-5x hero-play" aria-hidden="true"></i>
@@ -89,6 +86,7 @@ $(document).ready(function(){
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
     if ($(document).width() < 768) {
+      $('#navbar').css('background-color', 'white');
     } else {
       if(scroll_start > offset) {
           $('#navbar').css('background-color', 'white');
@@ -108,7 +106,7 @@ $(document).ready(function(){
 $("#featurePlay").click(function() {
     $('html,body').animate({
         scrollTop: $("#featureDesc").offset().top - 50},
-        1500);
+        1500, 'swing');
 });
 </script>
 </html>
