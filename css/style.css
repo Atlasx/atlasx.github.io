@@ -1,13 +1,23 @@
 .body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+.hero-image {
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding-top:50px;
 }
 
 .navbar {
   padding-right: 15px;
   border-width: 0px;
   border-radius: 0px;
-  background-color:white;
+  background-color: transparent;
 }
 
 .navbar-toggle {
@@ -31,7 +41,7 @@ a {
 }
 
 li {
-  background-color: white;
+  background-color: transparent;
   float: left;
   position: relative;
   list-style-type: none;
@@ -40,25 +50,28 @@ li {
  li:hover {
   color: white;
   border-bottom: 5px;
-  border-color: red;
-  background-color: black;
+  background-color: transparent;
 }
 
 li.active {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: black;
 }
 
 li.active > a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: black;
-  background-color: #dfdfdf;
+  background-color: transparent;
   border-bottom: 2px solid black;
 }
 
  li > a:hover {
   text-decoration: none;
-  background-color: #dfdfdf;
+  background-color: transparent;
+}
+
+.nav > li > a:hover {
+  background-color: transparent;
 }
 
  li > a:active {
@@ -66,8 +79,10 @@ li.active > a {
 }
 
 .navi-brand {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+  padding: 15px;
   color: black;
 }
 
@@ -77,7 +92,9 @@ li.active > a {
 }
 
 .navi-section {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 1.1em;
   color: black;
   padding:15px;
   float:left;
@@ -86,9 +103,8 @@ li.active > a {
 }
 
 .navi-section:hover {
-  font-family: 'Raleway', sans-serif;
   color: black;
-  background-color: #dfdfdf;
+  background-color: transparent;
   border-bottom: 2px solid black;
 }
 
