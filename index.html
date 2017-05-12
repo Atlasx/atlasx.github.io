@@ -16,7 +16,10 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <i class="fa fa-bars fa-fw fa-lg" aria-hidden="true"></i>
           </button>
-          <h1 class="navbar-brand navi-brand">Connor J Douglas <span id="alt-subtitle" style="display:none;">Game Developer</span></span> <small id="brand-subtitle">Game Developer</small></h1>
+          <h1 class="navbar-brand navi-brand">
+            Connor J Douglas
+            <span id="alt-subtitle" style="display:none;">Game Developer</span>
+            <small id="brand-subtitle">Game Developer</small></h1>
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -51,9 +54,15 @@
   <div class="hero-image" style="background-image: url(images/ppm.png);">
     <div class="hero-center">
       <h1 class="hero-title">Parts Per Million</h1>
-      <button type="button" class="hero-btn">
+      <p class="hero-subtitle">
+        A climate focused hex map strategy game<br /> with a stylized low poly aesthetic
+      </p>
+      <!--<button type="button" class="hero-btn">
         <i id="featurePlay" class="fa fa-play fa-4x hero-play" aria-hidden="true"></i>
-      </button>
+      </button>-->
+    </div>
+    <div class="hero-footer">
+      <i id="featurePlay" class="fa fa-angle-down fa-5x hero-play" aria-hidden="true"></i>
     </div>
   </div>
 
@@ -67,7 +76,7 @@
   </div>
 </body>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
@@ -99,7 +108,7 @@ $(document).ready(function(){
 $("#featurePlay").click(function() {
     $('html,body').animate({
         scrollTop: $("#featureDesc").offset().top - 50},
-        '5000');
+        1500);
 });
 </script>
 </html>

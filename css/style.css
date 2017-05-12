@@ -5,6 +5,18 @@ body {
   color: white;
 }
 
+.dark-color {
+  background-color: #222c37;
+}
+
+.light-color {
+  background-color: #ffffff;
+}
+
+.alt-light-color {
+  background-color: #fafbfc;
+}
+
 .hero-image {
   background-size: cover;
   position: absolute;
@@ -19,7 +31,14 @@ body {
 }
 
 .hero-center {
-  padding-top: 40vh;
+  padding-top: 30vh;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-footer {
+  padding-top: 90vh;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -28,13 +47,21 @@ body {
 .hero-title {
   color: white;
   font-size: 4.5em;
+  font-weight: 300;
+  text-shadow: 0px 0px 15px #000000;
+}
+
+.hero-subtitle {
+  font-family: "Roboto Condensed";
+  font-size: 3em;
   font-weight: 100;
-  text-shadow: 0px 2px 2px #000000;
+  text-shadow: 0px 0px 15px #000000;
 }
 
 .hero-play {
   color: white;
-  text-shadow: 0px 2px 2px #000000;
+  text-shadow: 0px 0px 15px #000000;
+  cursor: pointer;
 }
 
 .hero-btn {
@@ -143,7 +170,7 @@ li.active > a {
 }
 
 .navi-section:hover {
-  color: black;
+  color: white;
   background-color: transparent;
   border-bottom: 2px solid black;
 }
