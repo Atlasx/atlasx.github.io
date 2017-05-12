@@ -164,4 +164,8 @@ li.active > a {
   box-shadow: 0 0 50px rgba(0,0,0,0.9) inset;
 }
 
+.navbar {
+  background-color: white;
+}
+
 }

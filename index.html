@@ -16,7 +16,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <i class="fa fa-bars fa-fw fa-lg" aria-hidden="true"></i>
           </button>
-          <h1 class="navbar-brand navi-brand">Connor J Douglas <span id="alt-subtitle" style="visibility:hidden;">Game Developer</span></span> <small id="brand-subtitle">Game Developer</small></h1>
+          <h1 class="navbar-brand navi-brand">Connor J Douglas <span id="alt-subtitle" style="display:none;">Game Developer</span></span> <small id="brand-subtitle">Game Developer</small></h1>
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -79,17 +79,30 @@ $(document).ready(function(){
  var offset = 50;
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
-    if(scroll_start > offset) {
+    if ($(document).width() < 768) {
+      if (scroll_start > offset) {
         $('#navbar').css('background-color', 'white');
         $('.navi-brand').css('color', 'black');
         $('.navi-section').css('color', 'black');
         $('#brand-subtitle').hide();
-        $('#alt-subtitle').css('visibility', 'visible');
-     } else {
-        $('#navbar').css('background-color', 'transparent');
+        $('#alt-subtitle').show();
+      } else {
         $('#brand-subtitle').show();
-        $('#alt-subtitle').css('visibility', 'hidden');
-     }
+        $('#alt-subtitle').hide();
+      }
+    } else {
+      if(scroll_start > offset) {
+          $('#navbar').css('background-color', 'white');
+          $('.navi-brand').css('color', 'black');
+          $('.navi-section').css('color', 'black');
+          $('#brand-subtitle').hide();
+          $('#alt-subtitle').show();
+       } else {
+          $('#navbar').css('background-color', 'transparent');
+          $('#brand-subtitle').show();
+          $('#alt-subtitle').hide();
+       }
+    }
  });
 });
 
