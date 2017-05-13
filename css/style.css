@@ -98,12 +98,18 @@ h2 > small {
 p {
   font-family: "Roboto Condensed";
   font-size: 1.5em;
+  text-indent: 50px;
 }
 
 hr {
   width: 50%;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.v-center {
+  position: relative;
+  transform: translateY(50%);
 }
 
 .system-feature {
@@ -225,7 +231,7 @@ hr {
   min-width: 100%;
   display: table-cell;
   vertical-align: middle;
-  box-shadow: 0 0 200px rgba(0,0,0,1) inset;
+  box-shadow: 0 0 100px rgba(0,0,0,1) inset;
 }
 
 .hero-center {
@@ -369,6 +375,11 @@ li.active > a {
 .navi-section:hover {
   background-color: transparent;
   border-bottom: 2px solid black;
+}
+
+.img-rounded {
+  border-radius:25px;
+  overflow:hidden;
 }
 
 @media (max-width: 769px) {
