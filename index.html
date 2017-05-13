@@ -93,7 +93,6 @@
           <img class="roll-in pol-cloud" src="images/pollution1.png" style="margin-left:0px;width:300px;"/>
           <img class="roll-in2 pol-cloud" src="images/pollution1.png" style="margin-left:-80px;margin-top:100px;width:200px;"/>
           <img class="roll-in3 pol-cloud" src="images/pollution1.png" style="width:250px;margin-left:160px;margin-top:50px;"/>
-
         </div>
       </div>
       <div class="row system-feature">
@@ -109,15 +108,66 @@
           </p>
         </div>
       </div>
+      <div class="row system-feature">
+        <div class="col-md-7">
+          <h2>Cells <small>The modular bricks that built the game from the bottom up</small></h2>
+          <p>
+            Each individual cell type is derived from a base class HexCell. HexCell contains many overridable methods which allow for easily changing behaviors of
+            different cell types. With this method, we were able to easily add many new cells with varying behaviors such as tree placement in a forest cell, or
+            building placement in a city cell.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="cell1" src="images/cell1.png" width="150px"/>
+          <img class="cell2" src="images/cell2.png" width="150px"/>
+          <img class="cell3" src="images/cell3.png" width="150px"/>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container-fluid alt-light-color">
-    <h1 class="center">Trailer<small>Watch the island come to life</small></h1>
+    <h1 class="center">Video<small>Watch the island come to life</small></h1>
     <hr />
+    <div class="container center video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lNlwoa9j2bE" frameborder="0" allowfullscreen rel="0"></iframe>
+    </div>
   </div>
   <div class="container-fluid light-color">
     <h1 class="center">Team<small>The team behind it all</small></h1>
     <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Connor Douglas <small>Lead Programmer</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>UI Programmer</small> Henry Schaefer</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Zachary Frye <small>Programmer</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>Producer</small> Dell Barnes</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Kaleb Hogan <small>Artist</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>Artist</small> Jacob Moore</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid alt-light-color">
+    <div class="container center">
+      <p style="padding:10px;margin-bottom:0px;">
+        Site made by Connor J Douglas
+      </p>
+    </div>
   </div>
 </body>
 
@@ -133,6 +183,7 @@ $(document).ready(function(){
  var top_offset = 50;
  var weather_offset = $('#weather').offset().top - 300;
  var grid_offset = weather_offset + 200;
+ var cell_offset = grid_offset + 300;
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
     if ($(document).width() < 768) {
@@ -140,12 +191,14 @@ $(document).ready(function(){
     } else {
       if(scroll_start > top_offset) {
           $('#navbar').css('background-color', 'white');
+          $('#navbar').css('box-shadow', '0px 3px 5px #777');
           $('.navi-brand').css('color', 'black');
           $('.navi-section').css('color', 'black');
           $('#brand-subtitle').hide();
           $('#alt-subtitle').show();
        } else {
           $('#navbar').css('background-color', 'transparent');
+          $('#navbar').css('box-shadow', '');
           $('#brand-subtitle').show();
           $('#alt-subtitle').hide();
        }
@@ -156,6 +209,11 @@ $(document).ready(function(){
        }
        if (scroll_start > grid_offset) {
          $('.slide-in').addClass('slide-in-end');
+       }
+       if (scroll_start > cell_offset) {
+         $('.cell1').addClass('cell-end1');
+         $('.cell2').addClass('cell-end2');
+         $('.cell3').addClass('cell-end3');
        }
     }
  });
