@@ -11,7 +11,7 @@
 <body>
   <!-- Navbar -->
   <div class="container">
-    <nav id="navbar" class="navbar navbar-fixed-top">
+    <nav id="navbar" class="navbar navbar-fixed-top" style="box-shadow: 0px 3px 5px #777;background-color:white;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,8 +19,8 @@
           </button>
           <h1 class="navbar-brand navi-brand">
             Connor J Douglas
-            <span id="alt-subtitle" style="display:none;">Game Developer</span>
-            <small id="brand-subtitle">Game Developer</small></h1>
+            <span id="alt-subtitle">Game Developer</span>
+            </h1>
         </div>
         <div class="navbar-collapse collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -54,19 +54,93 @@
   <!-- Navbar Spacer -->
   <div class="nav-spacer"></div>
 
-  <div class="container-fluid">
-    <div class="container">
-      
+  <div class="container-fluid" style="padding:100px;">
+    <div class="container center">
+      <h1>School Projects <small>Projects worked on as assignments at the University of Utah's EAE program</small></h1>
     </div>
   </div>
 
+  <div class="container-fluid light-color" style="padding: 0px;">
+    <div class="project-container" style="background-image: url(../images/ppm.png);background-size: 100%;">
+      <div class="project-slider">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h1>Parts Per Million</h1>
+              <p>
+                Created by a team of six students at the University of Utah's EAE program, Parts Per Million is an alternative game focused on demonstrating
+                the effects of climate change. Players fight food shortages, explosive population growth, and natural disasters in an attempt to sustain
+                their island.
+                <br /><br />
+                Parts Per Million was made as the main assignment of Alternative Game Development FILM-3720 over the course of the Spring 2017 semester.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <div class="container">
+                <h2>Connor Douglas <small>Lead Programmer</small></h2>
+                <h2>Henry Schaefer <small>UI Programmer</small></h2>
+                <h2>Zachary Frye <small>Programmer</small></h2>
+                <h2>Dell Barnes <small>Producer</small></h2>
+                <h2>Kaleb Hogan <small>Artist</small></h2>
+                <h2>Jacob Moore <small>Artist</small></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-container" style="background-image: url(../images/veloces.png);background-size: 100%;">
+      <div class="project-slider">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h1>Veloces</h1>
+              <p>
+                Using the Unity3d game engine, Veloces was created as part of the University of Utah's EAE program. With two programmers and one artist, the game
+                took on a smaller scope to have better chances of finishing a complete experience. Veloces is an isometric local multiplayer hack 'n slash designed
+                to deliver exciting competitive co-op moments.
+                <br /><br />
+                Veloces was made as the main assignment of Traditional Game Development FILM-3710 over the course of the Fall 2016 semester.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <div class="container">
+                <h2>Connor Douglas <small>Programmer</small></h2>
+                <h2>Cam Jackson <small>Programmer</small></h2>
+                <h2>Ben Smoot <small>Artist</small></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid alt-light-color">
+    <div class="container center">
+      <p style="padding:10px;margin-bottom:0px;">
+        Site made by Connor J Douglas
+      </p>
+    </div>
+  </div>
 </body>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.project-container').mouseenter(function () {
+    $(this).children('.project-slider').addClass('project-hover');
+  });
 
+  $('.project-container').mouseleave(function () {
+    $(this).children('.project-slider').removeClass('project-hover');
+  });
+});
+</script>
 </html>

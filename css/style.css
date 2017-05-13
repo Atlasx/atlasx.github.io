@@ -20,6 +20,27 @@ body {
   color:black;
 }
 
+.project-container {
+  height: 600px;
+  min-height: 600px;
+  max-height: 600px;
+}
+
+.project-slider {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  margin-left: -1000px;
+  transition: 1s;
+}
+
+.project-hover {
+  opacity: 1;
+  margin-left: 0px;
+}
+
 .center {
   text-align: center;
 }
@@ -282,7 +303,6 @@ li {
 }
 
  li:hover {
-  color: white;
   border-bottom: 5px;
   background-color: transparent;
 }
@@ -347,7 +367,6 @@ li.active > a {
 }
 
 .navi-section:hover {
-  color: white;
   background-color: transparent;
   border-bottom: 2px solid black;
 }
