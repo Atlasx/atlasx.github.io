@@ -190,6 +190,10 @@ hr {
   text-align: center;
 }
 
+.nav-spacer {
+  height: 50px;
+}
+
 .hero-image {
   background-size: cover;
   position: absolute;
