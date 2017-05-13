@@ -392,4 +392,24 @@ li.active > a {
   padding-top: 40vh;
 }
 
+.cell1 {
+  display: none;
+}
+
+.cell2 {
+  display: none;
+}
+
+.cell3 {
+  display: none;
+}
+
+.slide-in {
+  display: none;
+}
+
+.pol-cloud {
+  display: none;
+}
+
 }
