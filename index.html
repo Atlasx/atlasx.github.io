@@ -98,7 +98,7 @@
       </div>
       <div class="row system-feature">
         <div class="col-md-5">
-
+          <img class="slide-in" src="images/island.png" width="500px"/>
         </div>
         <div class="col-md-7">
           <h2>Hex Grid <small>A procedural system for generating unique islands</small></h2>
@@ -132,6 +132,7 @@ $(document).ready(function(){
  var scroll_start = 0;
  var top_offset = 50;
  var weather_offset = $('#weather').offset().top - 300;
+ var grid_offset = weather_offset + 200;
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
     if ($(document).width() < 768) {
@@ -152,6 +153,9 @@ $(document).ready(function(){
          $('.roll-in').addClass('roll-in-end');
          $('.roll-in2').addClass('roll-in-end2');
          $('.roll-in3').addClass('roll-in-end3');
+       }
+       if (scroll_start > grid_offset) {
+         $('.slide-in').addClass('slide-in-end');
        }
     }
  });

@@ -73,6 +73,17 @@ hr {
   -webkit-filter: brightness(50%);
 }
 
+.slide-in {
+  opacity: 0;
+  transition: 1.5s;
+  margin-left: -150px;
+}
+
+.slide-in-end {
+  opacity: 1;
+  margin-left: -100px;
+}
+
 .roll-in {
   opacity: 0;
   transition: 1.5s;
