@@ -20,6 +20,19 @@ body {
   color:black;
 }
 
+.contact {
+  text-decoration: none;
+}
+
+.contact:hover {
+  text-decoration: none;
+}
+
+.contact i {
+  font-size: 1em;
+  color: black;
+}
+
 .project-container {
   height: 600px;
   min-height: 600px;
@@ -63,6 +76,10 @@ body {
 .video-container iframe, .video-container object, .video-container embed {
 	width:100%;
 	height:100%;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .pull-right {
@@ -211,9 +228,9 @@ hr {
 }
 
 .featured-text {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto";
   font-weight: 300;
-  font-size: 2.7em;
+  font-size: 2.2em;
   text-align: center;
 }
 
@@ -388,6 +405,10 @@ li.active > a {
   display: block;
   position: relative;
   float: right;
+}
+
+.featured-text {
+  font-size: 1.2em;
 }
 
 .navi-brand {
