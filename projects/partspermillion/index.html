@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connor Douglas | Parts Per Million</title>
+  <meta name="description" content="View some of my school projects from the University of Utah's EAE undergraduate program. All made in Unity3D.">
+  <link rel="icon" type="image/png" href="../../images/logo_cutout.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58050170-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar-toggleable-md fixed-top" style="background-color: transparent;padding:10px;padding-left:10px;">
+    <button class="navbar-toggler" style="display:none;" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand navi-brand" style="padding-left:10px;">
+      Connor J Douglas
+      <span id="alt-subtitle">Game Developer</span>
+    </h1>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="../../"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
+        </li>
+        <li class="active nav-item">
+          <a class="nav-link" href="../"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../about"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Feature Image -->
+  <div class="hero-image" style="background-image: url(../../images/ppm.png);">
+    <div class="hero-center">
+      <h1 class="hero-title">Parts Per Million</h1>
+      <p class="hero-subtitle">
+        A climate focused hex map strategy game<br /> with a stylized low poly aesthetic
+      </p>
+    </div>
+    <div class="hero-footer">
+      <i id="featurePlay" class="fa fa-angle-down fa-5x hero-play" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <!--Spacer for Bootstrap to fix itself-->
+  <div class="container" style="min-height:100vh;"></div>
+
+  <!-- Feature Content -->
+  <div id="featureDesc" class="container" style="background-color:#222c37;">
+    <img src="../../images/ppmlogo.png" width="80%" height="100%" style="padding-top:20px;display:block;margin:auto;max-width:700px;"/>
+  </div>
+  <div class="container">
+    <p class="featured-text" style="padding-bottom:20px;">
+      Created by a team of six students at the University of Utah's EAE program, Parts Per Million is an alternative game focused on demonstrating
+      the effects of climate change. Players fight food shortages, explosive population growth, and natural disasters in an attempt to sustain
+      their island.
+    </p>
+  </div>
+
+  <!-- SYSTEMS -->
+  <div id="weather" class="container-fluid light-color">
+    <h1 class="center">Systems<small>The core components of the game</small></h1>
+    <hr />
+    <div class="container">
+      <div class="row system-feature">
+        <div class="col-md-7">
+          <h2>Weather <small>A system designed to guide players</small></h2>
+          <p>
+            The weather system I built for Parts Per Million delivers swift and harsh punishment to a player who is taking the wrong path
+            through the game. A scaling category system allows us to inflict a variable range of difficulties to the player.
+            Weather events include natural disasters such as dust storms, polluted rain, and hurricanes.
+          </p>
+        </div>
+        <div class="col-md-5 center">
+          <img class="roll-in pol-cloud" src="../../images/pollution1.png" style="margin-left:0px;width:300px;"/>
+          <img class="roll-in2 pol-cloud" src="../../images/pollution1.png" style="margin-left:-80px;margin-top:100px;width:200px;"/>
+          <img class="roll-in3 pol-cloud" src="../../images/pollution1.png" style="width:250px;margin-left:160px;margin-top:50px;"/>
+        </div>
+      </div>
+      <div class="row system-feature">
+        <div class="col-md-5">
+          <img class="slide-in" src="../../images/island.png" width="500px"/>
+        </div>
+        <div class="col-md-7">
+          <h2>Hex Grid <small>A procedural system for generating unique islands</small></h2>
+          <p>
+            The grid is <i>the</i> core component for Parts Per Million. With configureable biomes, cell types, blend parameters, and more; the grid creates
+            an entirely new island with different gameplay for each play-through. The height map is generated off of layered octaves of perlin noise multiplied
+            by a radial gradient to achieve a coherent island shape. From there, biomes are randomly planted throughout and grow until they cover the island completely.
+          </p>
+        </div>
+      </div>
+      <div class="row system-feature">
+        <div class="col-md-7">
+          <h2>Cells <small>The modular bricks that build the game from the bottom up</small></h2>
+          <p>
+            Each individual cell type is derived from a base class HexCell. A HexCell contains many overridable methods which allow for interchangeable behaviors for
+            different cell types. With this method, we were able to easily add many new cells with varying behaviors such as tree placement in a forest cell, or
+            building placement in a city cell.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="cell1" src="../../images/cell1.png" width="150px"/>
+          <img class="cell2" src="../../images/cell2.png" width="150px"/>
+          <img class="cell3" src="../../images/cell3.png" width="150px"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid alt-light-color">
+    <h1 class="center">Video<small>Watch the island come to life</small></h1>
+    <hr />
+    <div class="container" style="padding:30px;">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lNlwoa9j2bE" frameborder="0" allowfullscreen rel="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="container-fluid light-color" style="padding-bottom:50px;">
+    <h1 class="center">Team<small>The team behind it all</small></h1>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Connor Douglas <small>Lead Programmer</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>UI Programmer</small> Henry Schaefer</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Zachary Frye <small>Programmer</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>Producer</small> Dell Barnes</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Kaleb Hogan <small>Artist</small></h2>
+        </div>
+        <div class="col-md-6 pull-right">
+          <h2><small>Artist</small> Jacob Moore</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOLADES -->
+  <div class="container-fluid alt-light-color" style="padding-bottom:100px;">
+    <div class="text-center">
+      <h1>Accolades<small>Awards and recognitions</small></h1>
+      <hr  />
+      <br />
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card light-color">
+            <div class="card-header">
+              <h3>EAE Day</h3>
+            </div>
+            <img class="card-img-top" src="../../images/eae.jpg" />
+            <div class="card-block">
+              <p class="card-text">
+                Invited to EAE Day, a end of the semester game showcase for the EAE program.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid alt-light-color">
+    <div class="container center">
+      <p style="padding:10px;margin-bottom:0px;text-indent:0px;">
+        Site made by Connor J Douglas
+      </p>
+    </div>
+  </div>
+</body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<script src="https://use.fontawesome.com/8f03c0c889.js"></script>
+<script>
+$(document).ready(function(){
+ var scroll_start = 0;
+ var top_offset = 50;
+ var weather_offset = $('#weather').offset().top - 300;
+ var grid_offset = weather_offset + 300;
+ var cell_offset = grid_offset + 300;
+ $(document).scroll(function() {
+    scroll_start = $(this).scrollTop();
+    if ($(document).width() < 768) {
+      $('#navbar').css('background-color', 'white');
+    } else {
+      if(scroll_start > top_offset) {
+          $('#navbar').css('background-color', 'white');
+          $('#navbar').css('padding', '0px');
+          $('#navbar').css('box-shadow', '0px 3px 5px #777');
+          $('.navi-brand').css('color', 'black');
+          $('.navi-section').css('color', 'black');
+          $('#brand-subtitle').hide();
+          $('#alt-subtitle').show();
+       } else {
+          $('#navbar').css('background-color', 'transparent');
+          $('#navbar').css('padding', '10px');
+          $('#navbar').css('box-shadow', '');
+          $('#brand-subtitle').show();
+          $('#alt-subtitle').hide();
+       }
+       if (scroll_start > weather_offset) {
+         $('.roll-in').addClass('roll-in-end');
+         $('.roll-in2').addClass('roll-in-end2');
+         $('.roll-in3').addClass('roll-in-end3');
+       }
+       if (scroll_start > grid_offset) {
+         $('.slide-in').addClass('slide-in-end');
+       }
+       if (scroll_start > cell_offset) {
+         $('.cell1').addClass('cell-end1');
+         $('.cell2').addClass('cell-end2');
+         $('.cell3').addClass('cell-end3');
+       }
+    }
+ });
+});
+
+$("#featurePlay").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#featureDesc").offset().top - 50},
+        1500, 'swing');
+});
+</script>
+
+</html>
