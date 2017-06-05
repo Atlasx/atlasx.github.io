@@ -58,10 +58,42 @@
   <!-- NAVBAR SPACER -->
   <div class="nav-spacer"></div>
 
-  <!-- GAMES -->
-  <div class="container-fluid light-color">
+  <!-- SIDE NAVBAR -->
+  <ul class="nav flex-column fixed-top" style="margin-top:50px;">
+    <li class="side-nav-item nav-item">
+      <a id="schoolGamesButton" class="side-nav-item nav-link  active">School Games</a>
+    </li>
+    <li class="nav-item">
+      <a id="shadersButton" class="nav-link side-nav-item">Shaders</a>
+    </li>
+    <li class="nav-item">
+      <a id="gameJamsButton" class="nav-link side-nav-item">Game Jams</a>
+    </li>
+  </ul>
+
+  <!-- CARD TEMPLATE
+    <div class="col-md-4">
+      <div class="card light-color">
+        <div class="card-header">
+          <h3>Title</h3>
+        </div>
+        <img class="card-img-top" src="../images/profile.jpg" />
+        <div class="card-block">
+          <p class="card-text">
+            Hello this is the subtitle for this card.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./other" role="button">Other</a>
+        </div>
+      </div>
+    </div>
+  -->
+
+  <!-- SCHOOL GAMES -->
+  <div id="schoolGames" class="container-fluid light-color">
     <div class="container center" style="padding:50px;">
-      <h1>School Projects <small>Built at the University of Utah's EAE Program</small></h1>
+      <h1>School Games <small>Built at the University of Utah's EAE Program</small></h1>
     </div>
   </div>
   <div class="container-fluid alt-light-color" style="padding:20px;">
@@ -69,7 +101,10 @@
       <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="card light-color">
-            <img class="card-img-top" src="../images/ppm_small.png" style="height: auto; width: 100%; display: block;" />
+            <div class="card-header">
+              <h3>Parts Per Million</h3>
+            </div>
+            <img class="card-img-top" src="../images/ppm_small.png" />
             <div class="card-block">
               <p class="card-text">
                 A climate focused hex map strategy game with a stylized low poly aesthetic.
@@ -82,7 +117,10 @@
         </div>
         <div class="col-md-4">
           <div class="card light-color">
-            <img class="card-img-top" src="../images/veloces_small.png" style="height: auto; width: 100%; display: block;" />
+            <div class="card-header">
+              <h3>Veloces</h3>
+            </div>
+            <img class="card-img-top" src="../images/veloces_small.png" />
             <div class="card-block">
               <p class="card-text">
                 Veloces is an isometric local multiplayer hack 'n slash designed to deliver exciting competitive co-op moments.
@@ -93,25 +131,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card light-color">
-            <img class="card-img-top" src="../images/profile.jpg" style="height: auto; width: 100%; display: block;" />
-            <div class="card-block">
-              <p class="card-text">
-                Hello this is the subtitle for this card.
-              </p>
-            </div>
-            <div class="card-footer">
-              <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./other" role="button">Other</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <!-- SHADERS -->
-  <div class="container-fluid light-color">
+  <div id="shaders" class="container-fluid light-color">
     <div class="container center" style="padding:50px;">
       <h1>Shaders <small>Visual effects written in Unity3D's HLSL</small></h1>
     </div>
@@ -121,20 +146,10 @@
       <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="card light-color">
-            <img class="card-img-top" src="../images/hardlight_half.gif" style="height: auto; width: 100%;" />
-            <div class="card-block">
-              <p class="card-text">
-                A recreation of the Hard-Light material from 343's Halo 5.
-              </p>
+            <div class="card-header">
+              <h3>Halo's Hard Light</h3>
             </div>
-            <div class="card-footer">
-              <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./hardlight" role="button">Hard Light</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card light-color">
-            <img class="card-img-top" src="../images/hardlight_half.gif" style="height: auto; width: 100%;" />
+            <img class="card-img-top" src="../images/hardlight_half.gif" />
             <div class="card-block">
               <p class="card-text">
                 A recreation of the Hard-Light material from 343's Halo 5.
@@ -149,10 +164,39 @@
     </div>
   </div>
 
+  <!-- GAME JAMS -->
+  <div id="gameJams" class="container-fluid light-color">
+    <div class="container center" style="padding:50px;">
+      <h1>Game Jams <small>24h-48h game hackathons</small></h1>
+    </div>
+  </div>
+  <div class="container-fluid alt-light-color" style="padding:20px;">
+    <div class="container center">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card light-color">
+            <div class="card-header">
+              <h3>European Soccer</h3>
+            </div>
+            <img class="card-img-top" src="../images/europeansoccer.png" />
+            <div class="card-block">
+              <p class="card-text">
+                A recreation of the Hard-Light material from 343's Halo 5.
+              </p>
+            </div>
+            <div class="card-footer">
+              <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./hardlight" role="button">European Soccer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <div class="container-fluid light-color">
-    <div class="container center">
-      <p style="padding:10px;margin-bottom:0px;">
+    <div class="container text-center">
+      <p style="padding:10px;margin-bottom:0px;text-indent:0px;">
         Site made by Connor J Douglas
       </p>
     </div>
@@ -164,5 +208,22 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
 
+<script>
+$("#schoolGamesButton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#schoolGames").offset().top - 50},
+        1000, 'swing');
+});
+$("#shadersButton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#shaders").offset().top - 50},
+        1000, 'swing');
+});
+$("#gameJamsButton").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#gameJams").offset().top - 50},
+        1000, 'swing');
+});
+</script>
 
 </html>
