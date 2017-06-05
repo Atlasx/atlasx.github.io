@@ -7,6 +7,9 @@
   <title>Connor Douglas | About Me, a personal insight into me</title>
   <meta name="description" content="Find out a little more about me while scrolling through my past projects and prototypes." />
   <link rel="icon" type="image/png" href="../images/logo_cutout.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,73 +40,72 @@
 </head>
 
 <body class="light-color">
-  <!-- Navbar -->
-  <div class="container">
-    <nav id="navbar" class="navbar navbar-fixed-top" style="box-shadow: 0px 3px 5px #777;background-color:white;">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <i class="fa fa-bars fa-fw fa-lg" aria-hidden="true"></i>
-          </button>
-          <h1 class="navbar-brand navi-brand">
-            Connor J Douglas
-            <span id="alt-subtitle">Game Developer</span>
-            </h1>
-        </div>
-        <div class="navbar-collapse collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a class="navi-section" href="../"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
-            </li>
-            <li>
-              <a class="navi-section" href="../projects"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
-            </li>
-            <li class="active">
-              <a class="navi-section"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
-            </li>
-            <li>
-              <a class="navi-section" href="../ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
-            </li>
-            <li>
-              <a class="navi-section" href="../contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
 
-  <!-- Navbar Spacer -->
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar navbar-toggleable-md fixed-top" style="box-shadow: 0px 3px 5px #777;background-color:white;padding:0px;padding-left:10px;">
+    <button class="navbar-toggler" style="display:none;" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand navi-brand">
+      Connor J Douglas
+      <span id="alt-subtitle">Game Developer</span>
+    </h1>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="../"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
+        </li>
+        <li class="active nav-item">
+          <a class="nav-link"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- NAVBAR SPACER -->
   <div class="nav-spacer"></div>
 
+  <!-- ABOUT ME HEADER -->
   <div class="container-fluid">
     <div class="container center" style="padding:50px;">
       <h1>About Me <small>The man, the myth, the legend!</small></h1>
     </div>
   </div>
 
+  <!-- ABOUT ME -->
   <div class="container-fluid alt-light-color">
     <div class="container">
       <div class="row" style="padding-top:50px;padding-bottom:50px;">
-        <div class="col-md-5">
-          <img src="../images/profile.jpg" class="img-rounded" width="300px" style="margin:auto;padding:15px;"/>
-        </div>
-        <div class="col-md-7">
+        <div class="col-md-12">
+          <img src="../images/profile.jpg" class="rounded float-left" width="30%" style="float:left;margin:20px;margin-top:7.5em;border:2px;border-radius:5px;"/>
           <h2>Connor J Douglas <small>Programmer, Designer, Gamer, and more</small></h2>
           <p style="text-indent:50px;">
-            Hey, I am Connor Douglas an aspiring game developer from Honolulu Hawaii going to the University of Utah for Computer Science.
-            I found my love for computer science and game developing ever since I joined the Robotics team in highschool and have been going strong ever since.
+            I am Connor Douglas, an aspiring game developer from Honolulu, Hawai’i, currently studying Computer Science at the University of Utah.
+            My involvement with the Robotics team in high school fostered an early interest in computer science,
+            programming, and friendly technological competition.  I’ve since pursued these interests and participate
+            in game jams, hackathons, collaboative coding projects for my classes, and of course a healthy dose of multiplayer gaming in my free time.
           </p>
           <p>
-            With around 7 years of programming experience, I have a solid foundation upon which I can pursue a higher goal of creating compelling and fun video games.
-            At the University of Utah, I have been able to join classes whose sole purpose is to create video games. In these classes I created the games Parts Per Million,
-            a hex tile based game with a focus on environmental impacts.
+            When I am not immersed in the digital world, I enjoy basking on the beaches of Oahu,
+            hiking the arid hills of Utah, biking the streets of Honolulu, and skiing the alpine basins of the Wasatch.
+            I’m also an avid trombone player with eleven years of practice and performance in Hawai’i, London, New York, and the Berklee College of Music.
           </p>
           <p>
-            Outside of classes I am an avid trombone player with over 11 years of practice and performances in London, New York, and Berklee.
+            At the University of Utah's EAE program, I was a part of teams of 4 to 6 programmers, artists, designers, and producers.
+            Parts Per Million, a climate focused hex tile game was made in one of these teams and was featured in the end of year EAE program party: EAE Days.
           </p>
           <p>
-            I love to hear anything about game development, computer science, or any other interesting activities so send me a message on twitter or shoot me an email.
+            I love hearing about game development, computer science, or any thing else so message me on twitter or shoot me an email.
           </p>
           <div class="text-center">
             <a class="btn btn-primary" style="display:inline-block;" href="../contact" role="button">Contact Me</a>
@@ -112,13 +114,22 @@
       </div>
     </div>
   </div>
+
+  <!-- FOOTER -->
+  <div class="container-fluid light-color">
+    <div class="container center">
+      <p style="padding:10px;margin-bottom:0px;">
+        Site made by Connor J Douglas
+      </p>
+    </div>
+  </div>
+
 </body>
 
+<!-- RESOURCES -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
-<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
-<script src="../js/jquery-3.1.1.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+
 
 </html>
