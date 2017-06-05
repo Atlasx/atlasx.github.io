@@ -20,6 +20,19 @@ body {
   color:black;
 }
 
+.card > img {
+  padding:20px;
+  height: auto;
+  width: 100%;
+}
+
+
+.card-text {
+  font-size: 1.2em;
+  text-indent: 0px;
+  text-align: left;
+}
+
 .contact {
   text-decoration: none;
 }
@@ -353,10 +366,30 @@ li.active > a {
   text-decoration: none;
 }
 
+.nav-item {
+  color:black;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+.nav-link {
+  width: 140px;
+  border-bottom: 2px solid transparent;
+  transition:.5s;
+  padding-bottom:10px;
+  padding-top:15px;
+  min-height: 50px;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  border-bottom: 2px solid black;
+}
+
 .navi-brand {
   font-weight: 100;
-  font-size: 3em;
-  padding: 15px;
+  font-size: 2.2em !important;
+  padding: 0px;
   color: black;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -382,9 +415,8 @@ li.active > a {
   font-weight: 300;
   font-size: 1.1em;
   color: black;
+  width: auto;
   padding:15px;
-  float:left;
-  display: inline-block;
   border-bottom: 2px solid transparent;
   transition:.5s;
 }
