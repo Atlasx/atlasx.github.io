@@ -129,7 +129,7 @@ h3 {
 
 h1 > small {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.55em;
   font-weight: 100;
   font-family: "Roboto Condensed";
   color: #c0c0c0;
@@ -137,7 +137,7 @@ h1 > small {
 
 h2 > small {
   display: inline-block;
-  font-size: 0.6em;
+  font-size: 0.55em;
   font-weight: 100;
   font-family: "Roboto Condensed";
   color: #c0c0c0;
