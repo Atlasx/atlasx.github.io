@@ -400,6 +400,8 @@ li.active > a {
   transition:.5s;
   padding-bottom:10px;
   padding-top:15px;
+  margin-left: 10px;
+  margin-right: 10px;
   min-height: 50px;
 }
 
