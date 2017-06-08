@@ -21,6 +21,10 @@ body {
 }
 
 .card {
+
+}
+
+.card-fixed-height {
   max-width: 400px;
   min-height: 632px;
   margin-top:30px;
