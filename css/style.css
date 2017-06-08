@@ -20,6 +20,12 @@ body {
   color:black;
 }
 
+.card {
+  max-width: 400px;
+  min-height: 632px;
+  margin-top:30px;
+}
+
 .card > img {
   padding:20px;
   height: auto;
