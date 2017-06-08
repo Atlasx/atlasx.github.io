@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connor Douglas | Veloces</title>
   <meta name="description" content="Veloces, a fast paced couch co-op with up to four players. Made at the University of Utah's EAE program.">
-  <link rel="icon" type="image/png" href="../../images/logo_cutout.png">
+  <link rel="icon" type="image/png" href="/images/logo_cutout.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -20,6 +20,11 @@
   ga('send', 'pageview');
 
 </script>
+<script>
+  $(function(){
+    $("#footer").load("/footer.html");
+  });
+</script>
 </head>
 
 <body>
@@ -32,26 +37,26 @@
     <div id="myNavbar" class="navbar-collapse collapse">
       <ul class="navbar-nav ml-auto text-center">
         <li class="nav-item">
-          <a class="nav-link" href="../../"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
+          <a class="nav-link" href="/"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
         </li>
         <li class="active nav-item">
-          <a class="nav-link" href="../"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
+          <a class="nav-link" href="/projects"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../about"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
+          <a class="nav-link" href="/about"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
+          <a class="nav-link" href="/ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
+          <a class="nav-link" href="/contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- FEATURE IMAGE -->
-  <div class="hero-image" style="background-image: url(../../images/veloces.png);">
+  <div class="hero-image" style="background-image: url(/images/veloces.png);">
     <div class="hero-center">
       <h1 class="hero-title">Veloces</h1>
       <p class="hero-subtitle">
@@ -68,7 +73,7 @@
 
   <!-- FEATURE DESCRIPTION -->
   <div id="featureDesc" class="container" style="background-color:#222c37;">
-    <img src="../../images/veloces_title.png" width="80%" height="100%" style="padding-top:20px;display:block;margin:auto;max-width:700px;"/>
+    <img src="/images/veloces_title.png" width="80%" height="100%" style="padding-top:20px;display:block;margin:auto;max-width:700px;"/>
   </div>
   <div class="container">
     <p class="featured-text" style="padding-bottom:20px;">
@@ -91,14 +96,14 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-3">
-          <img src="../../images/slash.png" width="350px;"/>
+          <img src="/images/slash.png" width="350px;"/>
         </div>
         <div class="col-md-3">
           <br /><br />
           <h2>Slash <br /><small>The basic attack for close-range combat</small></h2>
         </div>
         <div class="col-md-3">
-          <img src="../../images/stab.png" width="300px;"/>
+          <img src="/images/stab.png" width="300px;"/>
         </div>
         <div class="col-md-3">
           <br /><br />
@@ -110,7 +115,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-4">
-          <img src="../../images/shoot.png" width="350px;"/>
+          <img src="/images/shoot.png" width="350px;"/>
         </div>
         <div class="col-md-4">
           <br /><br />
@@ -147,50 +152,12 @@
   </div>
 
   <!-- FOOTER -->
-  <div class="container-fluid light-color">
-    <div class="container center">
-      <p style="padding:10px;padding-bottom:0px;margin-bottom:0px;text-indent:0px;font-size:1em;">
-        Made with care by Connor Douglas at home in Honolulu, Hawaii.
-      </p>
-    </div>
-    <hr />
-    <div class="container">
-      <div class="row justify-content-center" style="padding:15px;">
-        <div class="col-md-2">
-          <h5 style="font-family:'Roboto';"><strong>Sitemap</strong></h5>
-          <ul class="nav flex-column" style="font-family:'Roboto Condensed';">
-            <li><a href="http://cdouglas.io/">Featured</a></li>
-            <li><a href="http://cdouglas.io/projects">Projects</a></li>
-            <li><a href="http://cdouglas.io/about">About Me</a></li>
-            <li><a href="http://cdouglas.io/ConnorJDouglasResume.pdf">Resume</a></li>
-            <li><a href="http://cdouglas.io/contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h5><strong>Games</strong></h5>
-          <ul class="nav flex-column" style="font-family:'Roboto Condensed';">
-            <li><a href="http://cdouglas.io/projects/partspermillion">Parts Per Million</a></li>
-            <li><a href="http://cdouglas.io/projects/veloces">Veloces</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h5><strong>Shaders</strong></h5>
-          <ul class="nav flex-column" style="font-family:'Roboto Condensed';">
-            <li><a href="http://cdouglas.io/projects/hardlight">Hard Light</a></li>
-          </ul>
-          <br />
-          <h5><strong>Game Jams</strong></h5>
-          <ul class="nav flex-column" style="font-family:'Roboto Condensed';">
-            <li><a href="http://cdouglas.io/projects/europeansoccer">European Soccer</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="footer"></div>
+
 </body>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
 
 </html>
