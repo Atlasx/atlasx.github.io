@@ -36,7 +36,7 @@ body {
 
 .card-fixed-height {
   max-width: 400px;
-  min-height: 632px;
+  min-height: 600px;
   margin-top:30px;
 }
 
