@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Connor Douglas | Featured</title>
   <meta name="description" content="View some of my school projects from the University of Utah's EAE undergraduate program. All made in Unity3D.">
   <link rel="icon" type="image/png" href="/images/logo_cutout.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script>
@@ -80,6 +81,7 @@
   <!-- SITE MAP -->
   <div class="container-fluid light-color">
     <div class="container" style="padding:25px;">
+
       <div class="row">
         <div class="d-flex align-items-center">
           <div class="col-md-4">
@@ -91,31 +93,34 @@
             </div>
           </div>
           <div class="col-md-8" style="height:500px;">
-            <div id="projectCarouselIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#projectCarouselIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#projectCarouselIndicators" data-slide-to="1"></li>
-                <li data-target="#projectCarouselIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <img class="d-block img-fluid" src="images/ppm_small.png" alt="First Slide" />
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Parts Per Million</h3>
                 </div>
-                <div class="carousel-item active">
-                  <img class="d-block img-fluid" src="images/hardlight.png" alt="Second Slide" />
-                </div>
-                <div class="carousel-item active">
-                  <img class="d-block img-fluid" src="images/veloces_small.png" alt="Third Slide" />
+                <img class="card-img-top" src="/images/ppm_small.png" />
+                <div class="card-footer">
+                  <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="/projects/partspermillion" role="button">PPM</a>
                 </div>
               </div>
-              <a class="carousel-control-prev" href="#projectCarouselIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#projectCarouselIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Hard Light</h3>
+                </div>
+                <img class="card-img-top" src="/images/hardlight.png" />
+                <div class="card-footer">
+                  <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="/projects/hardlight" role="button">Hard Light</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h3>Veloces</h3>
+                </div>
+                <img class="card-img-top" src="/images/veloces_small.png" />
+                <div class="card-footer">
+                  <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="/projects/veloces" role="button">Veloces</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
