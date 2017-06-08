@@ -25,16 +25,12 @@
 <body>
   <!-- NAVBAR -->
   <nav id="navbar" class="navbar navbar-toggleable-md fixed-top" style="box-shadow: 0px 3px 5px #777;background-color:white;padding:0px;padding-left:10px;">
-    <button class="navbar-toggler" style="display:none;" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></span>
     </button>
-    <h1 class="navbar-brand navi-brand">
-      Connor J Douglas
-      <span id="alt-subtitle">Game Developer</span>
-    </h1>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="navbar-nav mr-auto"></ul>
-      <ul class="navbar-nav text-center">
+    <a class="navbar-brand" href="http://cdouglas.io">Connor J Douglas <small>Game Developer</small></a>
+    <div id="myNavbar" class="navbar-collapse collapse">
+      <ul class="navbar-nav ml-auto text-center">
         <li class="nav-item">
           <a class="nav-link" href="../"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
         </li>
@@ -54,19 +50,18 @@
     </div>
   </nav>
 
-
   <!-- NAVBAR SPACER -->
   <div class="nav-spacer"></div>
 
   <!-- SIDE NAVBAR -->
-  <ul class="nav flex-column fixed-top" style="margin-top:50px;">
+  <ul id="scrollHelper" class="nav flex-column fixed-top" style="margin-top:50px;">
     <li class="side-nav-item nav-item">
       <a id="schoolGamesButton" class="side-nav-item nav-link  active">School Games</a>
     </li>
-    <li class="nav-item">
+    <li class="side-nav-item nav-item">
       <a id="shadersButton" class="nav-link side-nav-item">Shaders</a>
     </li>
-    <li class="nav-item">
+    <li class="side-nav-item nav-item">
       <a id="gameJamsButton" class="nav-link side-nav-item">Game Jams</a>
     </li>
   </ul>
@@ -98,8 +93,9 @@
   </div>
   <div class="container-fluid alt-light-color" style="padding:20px;">
     <div class="container center">
-      <div class="row justify-content-center">
-        <div class="col-md-4">
+      <!--<div class="row justify-content-center">
+        <div class="col-md-4">-->
+        <div class="card-deck">
           <div class="card light-color">
             <div class="card-header">
               <h3>Parts Per Million</h3>
@@ -114,8 +110,6 @@
               <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./partspermillion" role="button">Parts Per Million</a>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
           <div class="card light-color">
             <div class="card-header">
               <h3>Veloces</h3>
@@ -130,10 +124,11 @@
               <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="./veloces" role="button">Veloces</a>
             </div>
           </div>
-        </div>
-      </div>
+        <!--</div>
+      </div>-->
     </div>
   </div>
+</div>
 
   <!-- SHADERS -->
   <div id="shaders" class="container-fluid light-color">
@@ -212,6 +207,7 @@
             <li><a href="http://cdouglas.io/ConnorJDouglasResume.pdf">Resume</a></li>
             <li><a href="http://cdouglas.io/contact">Contact</a></li>
           </ul>
+          <br />
         </div>
         <div class="col-md-2">
           <h5><strong>Games</strong></h5>
@@ -219,6 +215,7 @@
             <li><a href="http://cdouglas.io/projects/partspermillion">Parts Per Million</a></li>
             <li><a href="http://cdouglas.io/projects/veloces">Veloces</a></li>
           </ul>
+          <br />
         </div>
         <div class="col-md-2">
           <h5><strong>Shaders</strong></h5>
@@ -231,6 +228,7 @@
             <li><a href="http://cdouglas.io/projects/europeansoccer">European Soccer</a></li>
           </ul>
         </div>
+        <br />
       </div>
     </div>
   </div>

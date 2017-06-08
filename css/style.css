@@ -395,7 +395,7 @@ li.active > a {
 }
 
 .nav-link {
-  width: 140px;
+  width: 100%;
   border-bottom: 2px solid transparent;
   transition:.5s;
   padding-bottom:10px;
@@ -408,27 +408,20 @@ li.active > a {
   border-bottom: 2px solid black;
 }
 
-.navi-brand {
+.navbar-brand {
   font-weight: 100;
-  font-size: 2.2em !important;
+  font-size: 2em;
   padding: 0px;
   color: black;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.navi-brand > small {
-  display:block;
-  font-size:0.5em;
-  font-weight: 100;
-  padding-top: 8px;
-  padding-left: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-  color: #000;
+.navbar-brand:hover {
+  color:black;
 }
 
-.navi-brand > span {
+.navbar-brand > small {
   font-size:0.5em;
   font-weight: 100;
 }
@@ -453,6 +446,29 @@ li.active > a {
   overflow:hidden;
 }
 
+@media(max-width:768px){
+
+.clearfix-xs:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+}
+
+.navbar-toggler-icon {
+  padding-top: 10px;
+}
+
+@media (max-width: 991px) {
+  #scrollHelper {
+    display: none;
+  }
+}
+
 @media (max-width: 769px) {
 
 .navbar-toggle {
@@ -466,14 +482,14 @@ li.active > a {
 }
 
 .navi-brand {
-  font-size: 2em;
+  /*font-size: 2em;*/
 }
 
 #brand-subtitle {
   display: none;
 }
 
-#alt-subtitle {
+.navbar-brand > small {
   display: none;
 }
 
@@ -519,6 +535,26 @@ li.active > a {
 
 .pol-cloud {
   display: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.card > img {
+  width:100%;
+}
+
+.card-text {
+  font-size: 1em;
 }
 
 }
