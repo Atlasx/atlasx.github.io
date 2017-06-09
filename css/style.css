@@ -24,6 +24,10 @@ body {
 
 }
 
+.about-me > p{
+  font-size: 1.3em;
+}
+
 .fill-image {
   position: absolute;
   z-index: 0;
