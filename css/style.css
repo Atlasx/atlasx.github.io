@@ -24,6 +24,12 @@ body {
 
 }
 
+.card:hover {
+  border-style: solid;
+  border: 2px;
+  border-color: #0275d8;
+}
+
 pre {
   border: 5px;
   border-radius: 5px;
