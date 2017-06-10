@@ -24,6 +24,11 @@ body {
 
 }
 
+pre {
+  border: 5px;
+  border-radius: 5px;
+}
+
 .about-me > p{
   font-size: 1.3em;
 }
