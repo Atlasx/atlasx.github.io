@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-
+  transition: 0.5s;
 }
 
 .card:hover {
