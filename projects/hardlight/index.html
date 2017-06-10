@@ -146,94 +146,93 @@
 
   <div class="container-fluid">
     <div class="container" style="padding:50px;">
-      <div class="card card-inverse">
-        <p class="card-text">
-Shader "Custom/Hardlight" {
-	Properties {
-		_Color ("Color", Color) = (1,1,1,1)
-		_HexTex ("Hex Texture", 2D) = "white" {}
-		_DisplaceSpeedX ("X Hex Displacement Speed", Range(0,10)) = 0.0
-		_DisplaceSpeedY ("Y Hex Displacement Speed", Range(0,10)) = 0.0
-		_SecDisplaceX ("Secondary X Displacement", Range(0,1)) = 1.0
-		_SecDisplaceY ("Secondary Y Displacement", Range(0,1)) = 1.0
-		_SecondaryMultiplier ("Secondary Hex Multiplier", Range(0,1)) = 1.0
-		_BorderSize ("Border Glow Size", Range(0, 10)) = 8.0
-		_BorderColor ("Border Glow Color", Color) = (1,1,1,1)
-	}
-	SubShader {
-		Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector"="True" }
-		LOD 200
+      <pre>
+        <code class="language-GLSL">
+          Shader "Custom/Hardlight" {
+          	Properties {
+          		_Color ("Color", Color) = (1,1,1,1)
+          		_HexTex ("Hex Texture", 2D) = "white" {}
+          		_DisplaceSpeedX ("X Hex Displacement Speed", Range(0,10)) = 0.0
+          		_DisplaceSpeedY ("Y Hex Displacement Speed", Range(0,10)) = 0.0
+          		_SecDisplaceX ("Secondary X Displacement", Range(0,1)) = 1.0
+          		_SecDisplaceY ("Secondary Y Displacement", Range(0,1)) = 1.0
+          		_SecondaryMultiplier ("Secondary Hex Multiplier", Range(0,1)) = 1.0
+          		_BorderSize ("Border Glow Size", Range(0, 10)) = 8.0
+          		_BorderColor ("Border Glow Color", Color) = (1,1,1,1)
+          	}
+          	SubShader {
+          		Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector"="True" }
+          		LOD 200
 
-		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows alpha:fade
+          		CGPROGRAM
+          		// Physically based Standard lighting model, and enable shadows on all light types
+          		#pragma surface surf Standard fullforwardshadows alpha:fade
 
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
+          		// Use shader model 3.0 target, to get nicer looking lighting
+          		#pragma target 3.0
 
-		sampler2D _HexTex;
+          		sampler2D _HexTex;
 
-		struct Input {
-			float2 uv_HexTex;
-		};
+          		struct Input {
+          			float2 uv_HexTex;
+          		};
 
-		fixed4 _Color;
-		fixed4 _BorderColor;
-		fixed _DisplaceSpeedX;
-		fixed _DisplaceSpeedY;
-		fixed _SecDisplaceX;
-		fixed _SecDisplaceY;
-		fixed _SecondaryMultiplier;
-		fixed _BorderSize;
+          		fixed4 _Color;
+          		fixed4 _BorderColor;
+          		fixed _DisplaceSpeedX;
+          		fixed _DisplaceSpeedY;
+          		fixed _SecDisplaceX;
+          		fixed _SecDisplaceY;
+          		fixed _SecondaryMultiplier;
+          		fixed _BorderSize;
 
-		void surf (Input IN, inout SurfaceOutputStandard o) {
+          		void surf (Input IN, inout SurfaceOutputStandard o) {
 
-			const float PI = 3.14159;
+          			const float PI = 3.14159;
 
-			fixed scrollX = _Time * _DisplaceSpeedX + IN.uv_HexTex.x;
-			fixed scrollY = _Time * _DisplaceSpeedY + IN.uv_HexTex.y;
+          			fixed scrollX = _Time * _DisplaceSpeedX + IN.uv_HexTex.x;
+          			fixed scrollY = _Time * _DisplaceSpeedY + IN.uv_HexTex.y;
 
-			float2 newUV = float2(scrollX, scrollY);
+          			float2 newUV = float2(scrollX, scrollY);
 
-			//Separate hex into channels
-			float4 hex = tex2D(_HexTex, newUV);
-			float r = hex.r;
-			float g = hex.g;
-			float b = hex.b;
+          			//Separate hex into channels
+          			float4 hex = tex2D(_HexTex, newUV);
+          			float r = hex.r;
+          			float g = hex.g;
+          			float b = hex.b;
 
-			float2 displaceUV = float2(r,r) * 0.1 + IN.uv_HexTex;
+          			float2 displaceUV = float2(r,r) * 0.1 + IN.uv_HexTex;
 
-			fixed4 firstHex = tex2D(_HexTex, displaceUV).b * _Color;
+          			fixed4 firstHex = tex2D(_HexTex, displaceUV).b * _Color;
 
-			firstHex.a = r;
+          			firstHex.a = r;
 
-			float xBorder = pow(cos(PI*displaceUV.x), _BorderSize);
-			float yBorder = pow(cos(PI*displaceUV.y), _BorderSize);
+          			float xBorder = pow(cos(PI*displaceUV.x), _BorderSize);
+          			float yBorder = pow(cos(PI*displaceUV.y), _BorderSize);
 
-			float dx = _SecDisplaceX + _SinTime * 0.1;
-			float dy = _SecDisplaceY + _SinTime * 0.1;
+          			float dx = _SecDisplaceX + _SinTime * 0.1;
+          			float dy = _SecDisplaceY + _SinTime * 0.1;
 
-			displaceUV += float2(dx, dy);
+          			displaceUV += float2(dx, dy);
 
-			fixed4 secondHex = tex2D(_HexTex, displaceUV).b * _Color * _SecondaryMultiplier;
+          			fixed4 secondHex = tex2D(_HexTex, displaceUV).b * _Color * _SecondaryMultiplier;
 
-			fixed4 c = firstHex + secondHex + r * _Color * 1.5;
+          			fixed4 c = firstHex + secondHex + r * _Color * 1.5;
 
-			fixed4 border = _BorderColor;
-			border *= (xBorder + yBorder);
+          			fixed4 border = _BorderColor;
+          			border *= (xBorder + yBorder);
 
-			c += border;
+          			c += border;
 
-			o.Albedo = c.rgb;
-			o.Alpha = c.a;
-		}
-		ENDCG
-	}
-	FallBack "Diffuse"
-}
-
-        </p>
-      </div>
+          			o.Albedo = c.rgb;
+          			o.Alpha = c.a;
+          		}
+          		ENDCG
+          	}
+          	FallBack "Diffuse"
+          }
+        </code>
+      </pre>
     </div>
   </div>
 
@@ -242,7 +241,7 @@ Shader "Custom/Hardlight" {
 
 </body>
 
-<script src="/js/prism.js"></script>
+<script src="/js/prism.js" data-manual></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
