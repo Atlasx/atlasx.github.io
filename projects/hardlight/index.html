@@ -149,7 +149,7 @@
       <pre>
         <code class="language-GLSL">
           Shader "Custom/Hardlight" {
-          	Properties {
+          	Properties { // Unity uses these to generate UI to customize the shader with
           		_Color ("Color", Color) = (1,1,1,1)
           		_HexTex ("Hex Texture", 2D) = "white" {}
           		_DisplaceSpeedX ("X Hex Displacement Speed", Range(0,10)) = 0.0
@@ -161,6 +161,7 @@
           		_BorderColor ("Border Glow Color", Color) = (1,1,1,1)
           	}
           	SubShader {
+              // Transparent tags so the sphere in back can render through
           		Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector"="True" }
           		LOD 200
 
@@ -177,6 +178,7 @@
           			float2 uv_HexTex;
           		};
 
+              // Import variable from Unity custom material
           		fixed4 _Color;
           		fixed4 _BorderColor;
           		fixed _DisplaceSpeedX;
@@ -190,31 +192,40 @@
 
           			const float PI = 3.14159;
 
+                // First displacement of UV coordinated for scrolling UVs
           			fixed scrollX = _Time * _DisplaceSpeedX + IN.uv_HexTex.x;
           			fixed scrollY = _Time * _DisplaceSpeedY + IN.uv_HexTex.y;
 
           			float2 newUV = float2(scrollX, scrollY);
 
-          			//Separate hex into channels
+          			// Separate hex into channels
           			float4 hex = tex2D(_HexTex, newUV);
           			float r = hex.r;
           			float g = hex.g;
           			float b = hex.b;
 
+                // Apply wavey distortion from the red channel to the UV coordinates
           			float2 displaceUV = float2(r,r) * 0.1 + IN.uv_HexTex;
 
+                // Store the primary grid result into a color
           			fixed4 firstHex = tex2D(_HexTex, displaceUV).b * _Color;
 
           			firstHex.a = r;
 
+                // Calculate border fade from cosine of the UV coordinates
+                // Simply put, it gets a 1 for the edges of the UV space and a 0 for the middle
+                // NOTE: this will only work on objects that span the entire UV space, the proper way
+                // to fix this would be to add the border based on either another texture or angle of the camera on the object
           			float xBorder = pow(cos(PI*displaceUV.x), _BorderSize);
           			float yBorder = pow(cos(PI*displaceUV.y), _BorderSize);
 
+                // Second grid displacement
           			float dx = _SecDisplaceX + _SinTime * 0.1;
           			float dy = _SecDisplaceY + _SinTime * 0.1;
 
           			displaceUV += float2(dx, dy);
 
+                // Second grid fragment
           			fixed4 secondHex = tex2D(_HexTex, displaceUV).b * _Color * _SecondaryMultiplier;
 
           			fixed4 c = firstHex + secondHex + r * _Color * 1.5;
@@ -224,6 +235,7 @@
 
           			c += border;
 
+                // Give resulting combination to the standard Unity lighting function
           			o.Albedo = c.rgb;
           			o.Alpha = c.a;
           		}
