@@ -329,7 +329,7 @@ hr {
   transform: translate3d(100px, 0px, 0px);
 }
 
-.animation-element.slide-right.in-view {
+.animation-element.slide-right-slow.in-view {
   opacity: 1;
   -moz-transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
