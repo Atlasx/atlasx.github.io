@@ -1,0 +1,147 @@
+.title {
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 6em;
+  margin-top: -100px;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 3em;
+  margin-top: -40px;
+}
+
+.feature-heading {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 3em;
+}
+
+.feature-text {
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-indent: 2em;
+}
+
+.feature-text-shadow {
+  box-shadow: 0 0 105px 1000px #000 inset, 0 0 100px 50px #000;
+}
+
+.bulbs {
+  position: fixed;
+  width: 200px;
+  opacity: 1;
+  z-index: -10;
+}
+
+.bulbs-muted {
+  position: fixed;
+  width: 200px;
+  opacity: 0.5;
+  z-index: -10;
+}
+
+.bulbs-left {
+  position: fixed;
+  top: -10px;
+  left: -20px;
+  width: 200px;
+}
+
+.bulbs-left-2nd {
+  opacity: 0.5;
+  position: fixed;
+  top: -10px;
+  left: -100px;
+  width: 200px;
+}
+
+.bulbs-right {
+  position: fixed;
+  top: -10px;
+  right: -20px;
+  width: 200px;
+}
+
+.bulbs-right-2nd {
+  opacity: 0.5;
+  position: fixed;
+  top: -10px;
+  right: -100px;
+  width: 200px;
+}
+
+.newspaper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.glitch {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.05;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.body-night {
+  color: white;
+  background-color: black;
+  transition: 1s;
+}
+
+@keyframes float-bounce {
+  0%    {transform: translate(0, -10px)}
+  100%  {transform: translate(0, 10px)}
+}
+
+@keyframes jerk-bounce {
+  0%    {transform: translate(-10px, -15px)}
+  33%   {transform: translate(10px, -15px)}
+  75%   {transform: translate(-10px, 5px)}
+  90%   {transform: translate(-10px, -15px)}
+  100%  {transform: translate(10px, 15px)}
+}
+
+.bounce {
+  fill: #F00;
+  z-index: -10;
+  overflow: hidden;
+  opacity: 0.6;
+  position: absolute;
+  animation-direction: alternate;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-name: float-bounce;
+  animation-timing-function: ease-in-out;
+}
+
+.jerk {
+  fill: #F00;
+  z-index: -10;
+  overflow: hidden;
+  opacity: 0.6;
+  position: absolute;
+  animation-direction: alternate;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-name: jerk-bounce;
+  animation-timing-function: ease-in-out;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  overflow: hidden;
+}
