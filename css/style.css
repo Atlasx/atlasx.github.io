@@ -583,6 +583,10 @@ li.active > a {
   overflow:hidden;
 }
 
+.sub-image {
+  width: 32vw;
+}
+
 @media(max-width:768px){
 
 .clearfix-xs:after {
@@ -607,6 +611,10 @@ li.active > a {
 }
 
 @media (max-width: 769px) {
+
+.sub-image {
+  width:99vw;
+}
 
 .navbar-toggle {
   display: block;
