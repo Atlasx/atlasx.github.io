@@ -254,50 +254,5 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
-<script>
-$(document).ready(function(){
- var scroll_start = 0;
- var top_offset = 50;
- var weather_offset = $('#weather').offset().top - 300;
- var grid_offset = weather_offset + 300;
- var cell_offset = grid_offset + 300;
- $(document).scroll(function() {
-    scroll_start = $(this).scrollTop();
-    if ($(document).width() < 768) {
-      $('#navbar').css('background-color', 'white');
-    } else {
-      if(scroll_start > top_offset) {
-          $('#navbar').css('background-color', 'white');
-          $('#navbar').css('padding', '0px');
-          $('#navbar').css('padding-left', '10px');
-          $('#navbar').css('box-shadow', '0px 3px 5px #777');
-          $('.navi-brand').css('color', 'black');
-          $('.navi-section').css('color', 'black');
-          $('#brand-subtitle').hide();
-          $('#alt-subtitle').show();
-       } else {
-          $('#navbar').css('background-color', 'transparent');
-          $('#navbar').css('padding', '10px');
-          $('#navbar').css('box-shadow', '');
-          $('#brand-subtitle').show();
-          $('#alt-subtitle').hide();
-       }
-       if (scroll_start > weather_offset) {
-         $('.roll-in').addClass('roll-in-end');
-         $('.roll-in2').addClass('roll-in-end2');
-         $('.roll-in3').addClass('roll-in-end3');
-       }
-       if (scroll_start > grid_offset) {
-         $('.slide-in').addClass('slide-in-end');
-       }
-       if (scroll_start > cell_offset) {
-         $('.cell1').addClass('cell-end1');
-         $('.cell2').addClass('cell-end2');
-         $('.cell3').addClass('cell-end3');
-       }
-    }
- });
-});
-</script>
 
 </html>
