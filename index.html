@@ -27,7 +27,7 @@
       $("#contact").load("/contact.html");
     });
     $(window).resize(function() {
-      if (window.innerWidth < 1380) {
+      if (window.innerWidth < 1380 && window.innerWidth > 759) {
         $("#extra-card").show();
       } else {
         $("#extra-card").hide();
