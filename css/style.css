@@ -10,15 +10,16 @@ body {
   right:0px;
   z-index: 1000;
   margin: 15px;
-}
-
-.c-navbar-button {
+  margin-left: auto;
   border-radius: 100px;
   background-color: white;
   width: 60px;
   height: 60px;
-  margin-left: auto;
-  box-shadow: 0 0 3px 1px black;
+  box-shadow: 0 0 3px 1px grey;
+}
+
+.c-navbar-button {
+
 }
 
 .c-navbar-button:focus {
