@@ -612,6 +612,11 @@ li.active > a {
 
 @media (max-width: 769px) {
 
+.contact {
+  font-size: 1em;
+  text-decoration: none;
+}
+
 .sub-image {
   width:99vw;
 }
