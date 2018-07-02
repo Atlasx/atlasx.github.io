@@ -24,37 +24,14 @@
 <script>
   $(function(){
     $("#footer").load("/footer.html");
+    $("#navbar").load("/navbar.html");
   });
 </script>
 </head>
 
 <body>
   <!-- NAVBAR -->
-  <nav id="navbar" class="navbar navbar-toggleable-md fixed-top" style="box-shadow: 0px 3px 5px #777;background-color:white;padding:0px;padding-left:10px;">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="true" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></span>
-    </button>
-    <a class="navbar-brand" href="http://cdouglas.io">Connor J Douglas <small>Game Engineer</small></a>
-    <div id="myNavbar" class="navbar-collapse collapse">
-      <ul class="navbar-nav ml-auto text-center">
-        <li class="nav-item">
-          <a class="nav-link" href="/"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Featured</a>
-        </li>
-        <li class="active nav-item">
-          <a class="nav-link" href="/projects"><i class="fa fa-cube fa-fw" aria-hidden="true"></i> Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i> About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/ConnorJDouglasResume.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar"></div>
 
   <!-- NAVBAR SPACER -->
   <div class="nav-spacer"></div>
