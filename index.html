@@ -25,6 +25,11 @@
     $(function(){
       $("#footer").load("/footer.html");
       $("#contact").load("/contact.html");
+      if (window.innerWidth < 1380 && window.innerWidth > 759) {
+        $("#extra-card").show();
+      } else {
+        $("#extra-card").hide();
+      }
     });
     $(window).resize(function() {
       if (window.innerWidth < 1380 && window.innerWidth > 759) {
