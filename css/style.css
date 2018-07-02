@@ -19,11 +19,17 @@ body {
 }
 
 .c-navbar-button {
-
+  margin: auto;
+  align-items: center;
 }
 
 .c-navbar-button:focus {
   outline: 0;
+}
+
+.c-navbar-list {
+  width:400px;
+  height: 500px;
 }
 
 .dark-color {
