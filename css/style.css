@@ -8,6 +8,8 @@ body {
 .c-navbar {
   position:fixed;
   right:0px;
+  z-index: 1000;
+  margin: 15px;
 }
 
 .c-navbar-button {
