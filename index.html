@@ -26,6 +26,13 @@
       $("#footer").load("/footer.html");
       $("#contact").load("/contact.html");
     });
+    $(window).resize(function() {
+      if (window.innerWidth < 1380) {
+        $("#extra-card").show();
+      } else {
+        $("#extra-card").hide();
+      }
+    });
   </script>
 </head>
 
@@ -157,6 +164,17 @@
               </div>
             </div>
             <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Hard Light</h3>
+                </div>
+                <a href="/projects/hardlight"><img class="card-img-top" src="/images/hardlight.png" width="100%"/></a>
+                <div class="card-footer">
+                  <span style="font-family:'Roboto Condensed';font-size:1.3em;">Learn More: </span><a class="btn btn-primary" href="/projects/hardlight" role="button">Hard Light</a>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="extra-card">
               <div class="card">
                 <div class="card-header">
                   <h3>Hard Light</h3>

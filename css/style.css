@@ -21,9 +21,9 @@ body {
 }
 
 .card {
-  min-width: 275px;
-  max-width: 275px;
-  width: 275px;
+  min-width: 265px;
+  max-width: 265px;
+  width: 265px;
   margin: 5px;
   transition: 0.5s;
   border-color:rgba(0,0,0,.125);
