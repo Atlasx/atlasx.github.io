@@ -613,7 +613,7 @@ li.active > a {
 @media (max-width: 769px) {
 
 .contact {
-  font-size: 1em;
+  font-size: 2em;
   text-decoration: none;
 }
 
