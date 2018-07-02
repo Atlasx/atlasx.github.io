@@ -5,7 +5,12 @@ body {
   color: white;
 }
 
-.custom-navbar {
+.c-navbar {
+  position:fixed;
+  right:0px;
+}
+
+.c-navbar-button {
   border-radius: 100px;
   background-color: white;
   border-color: darkgray;
