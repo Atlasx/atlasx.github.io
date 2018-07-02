@@ -26,17 +26,16 @@
       $("#footer").load("/footer.html");
       $("#contact").load("/contact.html");
       if (window.innerWidth < 1380 && window.innerWidth > 759) {
-        $("#extra-card").show();
+        $("#extra-card").show().addClass("d-flex");
       } else {
-        $("#extra-card").hide();
+        $("#extra-card").hide().removeClass("d-flex");
       }
     });
     $(window).resize(function() {
-      console.log("Resizing" + window.innerWidth);
       if (window.innerWidth < 1380 && window.innerWidth > 759) {
-        $("#extra-card").show();
+        $("#extra-card").show().addClass("d-flex");
       } else {
-        $("#extra-card").hide();
+        $("#extra-card").hide().removeClass("d-flex");
       }
     });
   </script>
