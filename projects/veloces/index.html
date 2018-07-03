@@ -25,6 +25,13 @@
     $("#footer").load("/footer.html");
     $("#navbar").load("/navbar.html");
   });
+
+  function scrollDown() {
+    console.log("ScrollDown");
+    $('html,body').animate({
+       scrollTop: $("#featureDesc").offset().top
+    });
+  }
 </script>
 </head>
 

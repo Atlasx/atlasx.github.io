@@ -47,6 +47,11 @@ body {
   color:black;
 }
 
+#featurePlay {
+  position:absolute;
+  z-index:500;
+}
+
 .card {
   min-width: 265px;
   max-width: 350px;
