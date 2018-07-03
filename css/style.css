@@ -32,6 +32,10 @@ body {
   height: 500px;
 }
 
+.team-names {
+  font-size: 3em;
+}
+
 .no-hover:hover {
   border-color:rgba(0,0,0,.125) !important;
 }
@@ -666,6 +670,10 @@ li.active > a {
 }
 
 @media (max-width: 769px) {
+
+.team-names {
+  font-size: 1.5em;
+}
 
 .contact {
   font-size: 2em;
