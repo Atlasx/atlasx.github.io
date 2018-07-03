@@ -33,7 +33,7 @@ body {
 }
 
 .no-hover:hover {
-  border-color:rgba(0,0,0,.125);
+  border-color:rgba(0,0,0,.125) !important;
 }
 
 .dark-color {
