@@ -25,6 +25,12 @@
     $("#footer").load("/footer.html");
     $("#navbar").load("/navbar.html");
   });
+
+  $("#featurePlay").on('click', function () {
+    $('html,body').animate({
+       scrollTop: $("#featureDesc").offset().top
+    });
+  });
 </script>
 </head>
 
