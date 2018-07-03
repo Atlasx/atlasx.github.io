@@ -42,7 +42,7 @@ body {
   background-color: black;
 }
 
-.hover-dark:hover {
+.hover-dark:hover::after {
   opacity: 0.5;
 }
 
