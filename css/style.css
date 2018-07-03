@@ -47,7 +47,7 @@ body {
 .hover-dark:hover {
   opacity: 1;
   cursor: pointer;
-  box-shadow: 0 0 200px black;
+  box-shadow: 0 0 100px black;
   z-index: 100;
 }
 
