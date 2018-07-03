@@ -48,6 +48,7 @@ body {
   opacity: 1;
   cursor: pointer;
   box-shadow: 0 0 200px black;
+  z-index: 100;
 }
 
 .dark-color {
