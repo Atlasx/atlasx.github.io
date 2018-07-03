@@ -36,6 +36,15 @@ body {
   border-color:rgba(0,0,0,.125) !important;
 }
 
+.hover-dark {
+  opacity: 1;
+  background-color: black;
+}
+
+.hover-dark:hover {
+  opacity: 0.5;
+}
+
 .dark-color {
   background-color: #222c37;
   color:white;
