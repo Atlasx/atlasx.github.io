@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connor Douglas | Ludum Dare 41</title>
+  <meta name="description" content="Beat Running, a game build during the 41st Ludum Dare game jam.">
+  <link rel="icon" type="image/png" href="/images/logo_cutout.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58050170-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+  $(function(){
+    $("#footer").load("/footer.html");
+    $("#navbar").load("/navbar.html");
+  });
+</script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+  <!-- TITLE -->
+  <div class="container-fluid light-color">
+    <div class="container center" style="padding:50px;">
+      <h1>Beat Running <small>Built during the Ludum Dare 41st 48-hour game jam</small></h1>
+    </div>
+  </div>
+
+  <div class="container-fluid alt-light-color">
+    <div class="container center" style="padding:50px;">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Moving on the beat!<a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://t.co/IYjHoaLNjW">pic.twitter.com/IYjHoaLNjW</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/987725891580018688?ref_src=twsrc%5Etfw">April 21, 2018</a></blockquote>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Movement complete! Gotta get in the rest of the farming mechanics still.<a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/gamdev?src=hash&amp;ref_src=twsrc%5Etfw">#gamdev</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://t.co/uUVCVYizU0">pic.twitter.com/uUVCVYizU0</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/987748524098908161?ref_src=twsrc%5Etfw">April 21, 2018</a></blockquote>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Still feeling janky and a ton of placeholder assets, but it is coming along.<a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/ludumdare?src=hash&amp;ref_src=twsrc%5Etfw">#ludumdare</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/8n6qobaNJ3">pic.twitter.com/8n6qobaNJ3</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/987866125324046337?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Decided to ditch the complicated planting mechanics for something a bit more silly.<a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/ludumdare?src=hash&amp;ref_src=twsrc%5Etfw">#ludumdare</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/JyXN94O2NH">pic.twitter.com/JyXN94O2NH</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/987926164818690048?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Got my little robot dude in game and stepping around.<a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/ludumdare?src=hash&amp;ref_src=twsrc%5Etfw">#ludumdare</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/xmg13jXIMC">pic.twitter.com/xmg13jXIMC</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/988073340572090368?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When in doubt, add more vegetation.<a href="https://twitter.com/hashtag/LD41?src=hash&amp;ref_src=twsrc%5Etfw">#LD41</a> <a href="https://twitter.com/hashtag/LDJAM?src=hash&amp;ref_src=twsrc%5Etfw">#LDJAM</a> <a href="https://twitter.com/hashtag/ludumdare?src=hash&amp;ref_src=twsrc%5Etfw">#ludumdare</a> <a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/jQpi6RVBiP">pic.twitter.com/jQpi6RVBiP</a></p>&mdash; Connor Douglas (@connord_atlas) <a href="https://twitter.com/connord_atlas/status/988103174668959744?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
+        </div>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+</body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script src="https://use.fontawesome.com/8f03c0c889.js"></script>
+
+</html>
