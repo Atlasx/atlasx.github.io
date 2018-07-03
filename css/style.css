@@ -32,6 +32,10 @@ body {
   height: 500px;
 }
 
+.no-hover:hover {
+  border-color:rgba(0,0,0,.125);
+}
+
 .dark-color {
   background-color: #222c37;
   color:white;
