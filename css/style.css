@@ -38,12 +38,12 @@ body {
 
 .hover-dark {
   transition: 0.8s;
-  opacity: 1;
+  opacity: 0;
   background-color: black;
 }
 
 .hover-dark:hover {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .dark-color {
