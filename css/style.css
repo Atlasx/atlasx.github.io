@@ -46,10 +46,6 @@ body {
   opacity: 0.5;
 }
 
-.hover-dark *:hover {
-  opacity: 0.5;
-}
-
 .dark-color {
   background-color: #222c37;
   color:white;
