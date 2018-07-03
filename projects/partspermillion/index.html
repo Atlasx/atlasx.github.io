@@ -209,29 +209,13 @@ $(document).ready(function(){
  var scroll_start = 0;
  var top_offset = 50;
  var weather_offset = $('#weather').offset().top - 300;
- var grid_offset = weather_offset + 300;
- var cell_offset = grid_offset + 300;
+ var grid_offset = weather_offset + 350;
+ var cell_offset = grid_offset + 350;
  $(document).scroll(function() {
     scroll_start = $(this).scrollTop();
     if ($(document).width() < 768) {
-      $('#navbar').css('background-color', 'white');
+      //$('#navbar').css('background-color', 'white');
     } else {
-      if(scroll_start > top_offset) {
-          $('#navbar').css('background-color', 'white');
-          $('#navbar').css('padding', '0px');
-          $('#navbar').css('padding-left', '10px');
-          $('#navbar').css('box-shadow', '0px 3px 5px #777');
-          $('.navi-brand').css('color', 'black');
-          $('.navi-section').css('color', 'black');
-          $('#brand-subtitle').hide();
-          $('#alt-subtitle').show();
-       } else {
-          $('#navbar').css('background-color', 'transparent');
-          $('#navbar').css('padding', '10px');
-          $('#navbar').css('box-shadow', '');
-          $('#brand-subtitle').show();
-          $('#alt-subtitle').hide();
-       }
        if (scroll_start > weather_offset) {
          $('.roll-in').addClass('roll-in-end');
          $('.roll-in2').addClass('roll-in-end2');
