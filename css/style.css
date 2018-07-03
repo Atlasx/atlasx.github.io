@@ -44,6 +44,7 @@ body {
 
 .hover-dark:hover {
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .dark-color {
