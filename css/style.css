@@ -37,11 +37,16 @@ body {
 }
 
 .hover-dark {
+  transition: 0.8s;
   opacity: 1;
   background-color: black;
 }
 
 .hover-dark:hover {
+  opacity: 0.5;
+}
+
+.hover-dark *:hover {
   opacity: 0.5;
 }
 
