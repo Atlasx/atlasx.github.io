@@ -33,7 +33,7 @@ body {
 }
 
 .team-names {
-  font-size: 3em;
+  font-size: 1em;
 }
 
 .no-hover:hover {
@@ -672,7 +672,7 @@ li.active > a {
 @media (max-width: 769px) {
 
 .team-names {
-  font-size: 1.5em;
+  font-size: 0.5em;
 }
 
 .contact {
