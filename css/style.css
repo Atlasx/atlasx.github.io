@@ -12,6 +12,10 @@ body {
   overflow: hidden;
 }
 
+.fill:hover {
+  border: 1px lightblue solid;
+}
+
 .img-fill {
   flex-shrink: 0;
   height: 350px;
