@@ -10,10 +10,13 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.125);
 }
 
 .fill:hover {
-  border: 1px lightblue solid;
+  border-color: #0275d8;
 }
 
 .img-fill {
