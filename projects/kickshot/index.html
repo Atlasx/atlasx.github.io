@@ -34,6 +34,11 @@
        scrollTop: $("#featureDesc").offset().top
     }, 2000, "easeInOutSine");
   }
+
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
 </script>
 </head>
 
@@ -90,13 +95,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <img src="/images/kickshot_titleScreen.png" class="sub-image"/>
+        <img src="/images/kickshot_titleScreen.png" class="sub-image" data-toggle="lightbox"/>
       </div>
       <div class="col-md-4">
-        <img src="/images/kickshot_level1.png" class="sub-image"/>
+        <img src="/images/kickshot_level1.png" class="sub-image" data-toggle="lightbox"/>
       </div>
       <div class="col-md-4">
-        <img src="/images/kickshot_desertScreen.png" class="sub-image"/>
+        <img src="/images/kickshot_desertScreen.png" class="sub-image" data-toggle="lightbox"/>
       </div>
     </div>
   </div>
@@ -256,5 +261,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
 
 </html>
