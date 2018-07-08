@@ -34,6 +34,8 @@ body {
 
 .team-names {
   font-size: 1em;
+  padding-left:0px;
+  padding-right:0px;
 }
 
 .no-hover:hover {
@@ -673,8 +675,8 @@ li.active > a {
 
 .team-names {
   font-size: 0.5em;
-  padding-left:50px;
-  padding-right:50px;
+  padding-left:0px;
+  padding-right:0px;
 }
 
 .contact {
