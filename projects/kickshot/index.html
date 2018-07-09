@@ -253,7 +253,10 @@
         <div class="col-md-8 col-12 order-md-12">
           <h2>FX <small>GLSL Shaders and Effects</small></h2>
           <p>
-
+            While the islands themselves were pretty, they were also very static. To solve this I decided to add waterfalls: a common sight in floating islands. The effect is achieved using
+            several layers of meshes adding components of the waterfall. The script itself is rather simple, just a scrolling UV space for the blue background, while the foam is a little more
+            interesting. The foam is achieved by sampling a perlin noise texture and discarding any fragments within a certain range. This range is tunable on the asset to allow for multiple scales
+            of waterfall.
           </p>
         </div>
         <div class="col-md-4 col-12 order-md-1 fill rounded">
@@ -263,6 +266,112 @@
           <a href="/images/kickshot_waterfallImage.png" data-gallery="fx-gallery" style="display:none;"></a>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container" style="padding:50px;">
+      <pre>
+        <code class="language-GLSL">
+          Shader "Effects/Waterfall" {
+          	Properties {
+          		_Color ("Color", Color) = (1,1,1,1)
+          		_MainTex ("Albedo (RGB)", 2D) = "white" {}
+                  _AlphaTex ("Alpha Cutoff", 2D) = "white" {}
+                  _USpeed ("U Speed", Range(0,20)) = 0.0
+                  _VSpeed ("V Speed", Range(0,20)) = 0.0
+          	}
+          	SubShader {
+          		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+          		LOD 200
+
+                  ZWrite On
+                  ZTest On
+                  Blend SrcAlpha OneMinusSrcAlpha
+
+          		CGPROGRAM
+          		#pragma surface surf Standard alpha:fade
+          		#pragma target 3.0
+                  #include "UnityCG.cginc"
+
+                  sampler2D _AlphaTex;
+          		sampler2D _MainTex;
+
+          		struct Input {
+          			float2 uv_MainTex;
+          		};
+
+          		half _Glossiness;
+          		half _Metallic;
+          		fixed4 _Color;
+                  half _USpeed;
+                  half _VSpeed;
+
+          		void surf (Input IN, inout SurfaceOutputStandard o) {
+                      float2 dispUV = IN.uv_MainTex;
+                      dispUV.x += _Time * _USpeed;
+                      dispUV.y += _Time * _VSpeed;
+          			fixed4 c = tex2D (_MainTex, dispUV) * _Color;
+          			o.Albedo = c.rgb;
+          			o.Alpha = tex2D(_AlphaTex, dispUV).r;
+          		}
+          		ENDCG
+          	}
+          	FallBack "Diffuse"
+          }
+        </code>
+      </pre>
+    </div>
+    <div class="container" style="padding:50px;">
+      <pre>
+        <code class="language-GLSL">
+          Shader "Effects/WaterfallFoam" {
+          	Properties {
+          		_Color ("Color", Color) = (1,1,1,1)
+                  _MainTex ("Alpha Cutoff", 2D) = "white" {}
+                  _AlphaCutoff ("Alpha Cutoff", Range(0,1)) = 0.0
+                  _USpeed ("U Speed", Range(0,20)) = 0.0
+                  _VSpeed ("V Speed", Range(0,20)) = 0.0
+          	}
+          	SubShader {
+          		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+          		LOD 200
+
+                  ZWrite On
+                  ZTest On
+                  Blend SrcAlpha OneMinusSrcAlpha
+
+          		CGPROGRAM
+          		#pragma surface surf Standard alpha:fade
+          		#pragma target 3.0
+
+                  sampler2D _MainTex;
+
+          		struct Input {
+          			float2 uv_MainTex;
+          		};
+
+          		half _Glossiness;
+          		half _Metallic;
+          		fixed4 _Color;
+                  half _USpeed;
+                  half _VSpeed;
+                  float _AlphaCutoff;
+
+          		void surf (Input IN, inout SurfaceOutputStandard o) {
+                      float2 dispUV = IN.uv_MainTex;
+                      dispUV.x += _Time.r * _USpeed;
+                      dispUV.y += _Time.r * _VSpeed;
+          			float4 c = tex2D (_MainTex, dispUV);
+                      half ret = clamp((c.r - _AlphaCutoff) * 100.0, 0, 1);
+          			o.Albedo = _Color.rgb;
+          			o.Alpha = ret;
+          		}
+          		ENDCG
+          	}
+          	FallBack "Diffuse"
+          }
+        </code>
+      </pre>
     </div>
   </div>
 
@@ -325,6 +434,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
+<script src="/js/prism.js"></script>
 <script src="https://use.fontawesome.com/8f03c0c889.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
