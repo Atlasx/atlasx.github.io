@@ -277,19 +277,18 @@
       <pre>
         <code class="language-GLSL">
       		void surf (Input IN, inout SurfaceOutputStandard o) {
-            //Get proper UV coordinates from model
-            float2 dispUV = IN.uv_MainTex;
+              //Get proper UV coordinates from model
+              float2 dispUV = IN.uv_MainTex;
 
-            //Displace UV coord using _Time
-            dispUV.x += _Time * _USpeed;
-            dispUV.y += _Time * _VSpeed;
+              //Displace UV coord using _Time
+              dispUV.x += _Time * _USpeed;
+              dispUV.y += _Time * _VSpeed;
 
-            //Sample and return proper color
-      			fixed4 c = tex2D (_MainTex, dispUV) * _Color;
-      			o.Albedo = c.rgb;
-      			o.Alpha = tex2D(_AlphaTex, dispUV).r;
-      		}
-        </code>
+              //Sample and return proper color
+        			fixed4 c = tex2D (_MainTex, dispUV) * _Color;
+        			o.Albedo = c.rgb;
+        			o.Alpha = tex2D(_AlphaTex, dispUV).r;
+      		}</code>
       </pre>
     </div>
     <div class="container center" style="padding-top:50px;">
@@ -299,23 +298,21 @@
       <pre>
         <code class="language-GLSL">
       		void surf (Input IN, inout SurfaceOutputStandard o) {
-            //Sample proper UV coordinates
-            float2 dispUV = IN.uv_MainTex;
+              //Sample proper UV coordinates
+              float2 dispUV = IN.uv_MainTex;
 
-            //Displace UV coords by _Time for scrolling effect
-            dispUV.x += _Time.r * _USpeed;
-            dispUV.y += _Time.r * _VSpeed;
+              //Displace UV coords by _Time for scrolling effect
+              dispUV.x += _Time.r * _USpeed;
+              dispUV.y += _Time.r * _VSpeed;
 
-            //Sample noise texture
-      			float4 c = tex2D (_MainTex, dispUV);
+              //Sample noise texture
+        			float4 c = tex2D (_MainTex, dispUV);
 
-            //Clamp return value and use full alpha for open spots
-            half ret = clamp((c.r - _AlphaCutoff) * 100.0, 0, 1);
-      			o.Albedo = _Color.rgb;
-      			o.Alpha = ret;
-      		}
-          }
-        </code>
+              //Clamp return value and use full alpha for open spots
+              half ret = clamp((c.r - _AlphaCutoff) * 100.0, 0, 1);
+        			o.Albedo = _Color.rgb;
+        			o.Alpha = ret;
+      		}</code>
       </pre>
     </div>
   </div>
