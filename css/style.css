@@ -63,14 +63,11 @@ body {
 
 .hover-dark {
   transition: 0.8s;
-  opacity: 0;
-  background-color: rgba(0,0,0,0);
   z-index: 10;
   box-shadow: 0 0 0px black;
 }
 
 .hover-dark:hover {
-  opacity: 1;
   cursor: pointer;
   box-shadow: 0 0 100px black;
   z-index: 100;
