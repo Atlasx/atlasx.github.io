@@ -144,6 +144,7 @@ pre {
 
 
 .card-text {
+  padding:10px;
   font-size: 1.2em;
   text-indent: 0px;
   text-align: left;
