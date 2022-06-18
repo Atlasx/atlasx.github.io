@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connor Douglas | Kickshot</title>
+    <meta name="description" content="View some of my school projects from the University of Utah's EAE undergraduate program. All made in Unity3D.">
+    <link rel="icon" type="image/png" href="/images/logo_cutout.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="/css/prism.css" rel="stylesheet" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58050170-2', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+    <script>
+  $(function(){
+    $("#footer").load("/footer.html");
+    $("#navbar").load("/navbar.html");
+  });
+
+  function scrollDown() {
+    console.log("ScrollDown");
+    $('html,body').animate({
+       scrollTop: $("#featureDesc").offset().top
+    }, 2000, "easeInOutSine");
+  }
+
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- Feature Image -->
+    <div class="hero-image" style="background-image: url(/images/01.SAINTS_ROW_Custom_Buggy_Super_Jump_4K.jpg);">
+        <div class="hero-center">
+            <h1 class="hero-title">Saints Row</h1>
+            <p class="hero-subtitle">
+                AAA Action-Adventure game set in the wild city of Santo Ileso.
+            </p>
+        </div>
+        <div class="hero-footer d-flex justify-content-center">
+            <i id="featurePlay" class="fa fa-angle-down fa-5x hero-play" aria-hidden="true" onclick="scrollDown()"></i>
+        </div>
+    </div>
+
+    <!--Spacer for Bootstrap to fix itself-->
+    <div class="container" style="min-height:100vh;"></div>
+
+    <!-- Feature Content -->
+    <div id="featureDesc" class="container" style="background-color:#222c37;">
+        <img src="/images/saints-row-202X-logo-white-400w.png" width="80%" height="100%" style="padding-top:40px;display:block;margin:auto;max-width:700px;" />
+    </div>
+    <div class="container">
+        <p class="featured-text" style="padding-top:20px;padding-bottom:20px;">
+            Welcome to Santo Ileso, a vibrant fictional city in the heart of the American SouthWest. <br />In a world rife with crime, where lawless factions fight for power,
+            a group of young friends embark on their own criminal venture, as they rise to the top in their bid to become Self Made.
+        </p>
+    </div>
+
+    <!-- PLAY -->
+    <div class="container-fluid alt-light-color" style="padding-top:50px;padding-bottom:50px;">
+        <h1 class="center">Official Site</h1>
+        <br />
+        <div class="container-fluid center" style="">
+            <a style="z-index:1;" class="btn btn-primary" href="https://saintsrow.com/" role="button">Saints Row</a>
+        </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="container-fluid light-color" style="padding-top:50px;padding-bottom:50px;">
+        <h1 class="center">Gameplay Trailer</h1>
+        <hr />
+        <div class="container-fluid d-flex justify-content-center" style="padding:15px;">
+            <div class="embed-responsive embed-responsive-16by9" style="max-width:1000px;">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JR1w18sv4Rw" frameborder="0" allowfullscreen rel="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORK -->
+    <div class="container-fluid alt-light-color" style="padding-top:50px;padding-bottom:50px;">
+        <div class="text-center">
+            <h1>Contributions</h1>
+            <hr />
+            <br />
+        </div>
+        <div class="container">
+            <p>
+                Since my start at Volition in Summer of 2019 I have had the privilege of working on the Missions team to bring together the story and side quests of Saints Row. The end result is the culmination of a whole team of
+                programmers, designers, artists, writers, producers, QA, and many more, putting in countless hours of work. Assembling a mission consists of constant cross-discipline communication to coordinate creation of prototypes, Co-op functionality, mission interiors, 
+                custom player states, custom world states, cinematic moments, QTEs, and much more all topped off with a healthy amount of bug fixing to ensure everything works smoothly. 
+            </p>
+            <p>
+                Saints Row is not yet released so I cannot go into specifics for my individual contributions, however I can speak generally to some of the systems I own and my work done for the Missions team.
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid light-color" style="padding-bottom:50px;">
+        <div class="container">
+            <div class="row justify-content-center" style="padding:25px;">
+                <div class="col-12">
+                    <h2>Co-oping Scripts <small>Implementation</small></h2>
+                    <p>
+                        The entirety of Saints Row is made to be played in co-op. This means all of the designer-facing mission scripts need to go through the process of co-opification by tracking down the associated systems' co-op functionality
+                        and either manually syncing it via custom RPCs or working with the system owner to sync it all. This usually involved diving into many different systems within the game, understand their syncing behavior and then implementing any
+                        changes needed to keep things working for multiple players.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="padding:25px;">
+                <div class="col-12">
+                    <h2>QTE System <small>Maintenance</small></h2>
+                    <p>
+                        This system orchestrates a local player QTE and replicates results to the remote avatar. I inherited this system a couple years back and have made minor fixes and improvements.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="padding:25px;">
+                <div class="col-12">
+                    <h2>Components <small>and Extra Behaviors</small></h2>
+                    <p>
+                        Various other behaviors were needed for the project. Player wranglers to keep them from straying too far from a critical area, special weapons with unique bullet behaviors, and activity systems to control custom avatar behavior.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="padding:25px;">
+                <div class="col-12">
+                    <h2>Prototyping <small>Designer Collaboration</small></h2>
+                    <p>
+                        When creating a new mission, the prototyping process is a highly iterative and collaborative process between the mission designer and their programmer. Prototypes would be created with chunked mission functionality while more complex sequences
+                        were identified and prototyped separately for implementation or co-op concerns. As the mission became more finalized, general co-op and more custom scripting would be included. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+</body>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400|Roboto+Condensed:100,300" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<script src="/js/prism.js"></script>
+<script src="https://use.fontawesome.com/8f03c0c889.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+
+</html>
